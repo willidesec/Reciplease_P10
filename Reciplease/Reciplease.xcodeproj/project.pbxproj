@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A21D21BC16CA0048745D /* FridgeViewController.swift */; };
+		3F29A22421BC18490048745D /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22321BC18490048745D /* FoodCollectionViewCell.swift */; };
 		3F6422F721B7B89F009F630C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6422F621B7B89F009F630C /* AppDelegate.swift */; };
-		3F6422F921B7B89F009F630C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6422F821B7B89F009F630C /* ViewController.swift */; };
 		3F6422FC21B7B89F009F630C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6422FA21B7B89F009F630C /* Main.storyboard */; };
 		3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F6422FD21B7B89F009F630C /* Reciplease.xcdatamodeld */; };
 		3F64230121B7B89F009F630C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F64230021B7B89F009F630C /* Assets.xcassets */; };
@@ -27,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F29A21D21BC16CA0048745D /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
+		3F29A22321BC18490048745D /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F6422F321B7B89F009F630C /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6422F621B7B89F009F630C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F6422F821B7B89F009F630C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F6422FB21B7B89F009F630C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F6422FE21B7B89F009F630C /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		3F64230021B7B89F009F630C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +60,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F29A21F21BC17230048745D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F29A21D21BC16CA0048745D /* FridgeViewController.swift */,
+				3F29A22321BC18490048745D /* FoodCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F29A22021BC172D0048745D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F6422FD21B7B89F009F630C /* Reciplease.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F29A22121BC17380048745D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F6422FA21B7B89F009F630C /* Main.storyboard */,
+				3F64230221B7B89F009F630C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F29A22221BC17410048745D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F6422F621B7B89F009F630C /* AppDelegate.swift */,
+				3F64230021B7B89F009F630C /* Assets.xcassets */,
+				3F64230521B7B89F009F630C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3F6422EA21B7B89F009F630C = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +117,10 @@
 		3F6422F521B7B89F009F630C /* Reciplease */ = {
 			isa = PBXGroup;
 			children = (
-				3F6422F621B7B89F009F630C /* AppDelegate.swift */,
-				3F6422F821B7B89F009F630C /* ViewController.swift */,
-				3F6422FA21B7B89F009F630C /* Main.storyboard */,
-				3F64230021B7B89F009F630C /* Assets.xcassets */,
-				3F64230221B7B89F009F630C /* LaunchScreen.storyboard */,
-				3F64230521B7B89F009F630C /* Info.plist */,
-				3F6422FD21B7B89F009F630C /* Reciplease.xcdatamodeld */,
+				3F29A22221BC17410048745D /* Supporting Files */,
+				3F29A22121BC17380048745D /* View */,
+				3F29A22021BC172D0048745D /* Model */,
+				3F29A21F21BC17230048745D /* Controller */,
 			);
 			path = Reciplease;
 			sourceTree = "<group>";
@@ -201,7 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */,
-				3F6422F921B7B89F009F630C /* ViewController.swift in Sources */,
+				3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */,
+				3F29A22421BC18490048745D /* FoodCollectionViewCell.swift in Sources */,
 				3F6422F721B7B89F009F630C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Reciplease/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGXH6EX8FJ;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Reciplease/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
