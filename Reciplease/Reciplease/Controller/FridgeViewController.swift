@@ -14,6 +14,12 @@ class FridgeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var colors = [UIColor]()
+        colors.append(UIColor.redThemeColor)
+        colors.append(UIColor.pinkThemeColor)
+        navigationController?.navigationBar.setGradientBackground(colors: colors)
+        
 
     }
     
