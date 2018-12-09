@@ -10,22 +10,22 @@ import UIKit
 
 class FridgeViewController: UIViewController {
     
+    // MARK: - PROPERTIES
     let array = ["Lait", "Beurre", "Ammande", "Chocolat", "Banane", "Confiture", "Nutella", "Oeufs", "Pommes", "Poulet", "Frites", "Carottes", "Riz", "Yaourt", "Salade"]
 
+    // MARK: - VIEW
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var colors = [UIColor]()
-        colors.append(UIColor.redThemeColor)
-        colors.append(UIColor.pinkThemeColor)
-        navigationController?.navigationBar.setGradientBackground(colors: colors)
         
 
     }
     
+    // MARK: - METHODS
+    
 
 }
 
+// MARK: - EXTENSION
 extension FridgeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
