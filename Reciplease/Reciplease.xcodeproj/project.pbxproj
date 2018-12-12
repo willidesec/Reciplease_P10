@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F20EA2121C1BB1300A1A179 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2021C1BB1300A1A179 /* UIView.swift */; };
 		3F20EA2321C1C64700A1A179 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2221C1C64700A1A179 /* UIViewController.swift */; };
+		3F20EA2621C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2521C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift */; };
+		3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */; };
 		3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A21D21BC16CA0048745D /* FridgeViewController.swift */; };
 		3F29A22421BC18490048745D /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22321BC18490048745D /* FoodCell.swift */; };
 		3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22621BD84050048745D /* CAGradientLayer.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		3F20EA2021C1BB1300A1A179 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3F20EA2221C1C64700A1A179 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		3F20EA2521C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+CollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+CollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		3F29A21D21BC16CA0048745D /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		3F29A22321BC18490048745D /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		3F29A22621BD84050048745D /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
@@ -72,10 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F29A21F21BC17230048745D /* Controller */ = {
+		3F20EA2421C1CE6000A1A179 /* Fridge */ = {
 			isa = PBXGroup;
 			children = (
 				3F29A21D21BC16CA0048745D /* FridgeViewController.swift */,
+				3F20EA2521C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift */,
+				3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */,
+			);
+			path = Fridge;
+			sourceTree = "<group>";
+		};
+		3F29A21F21BC17230048745D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F20EA2421C1CE6000A1A179 /* Fridge */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,10 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */,
+				3F20EA2621C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift in Sources */,
 				3F29A22B21BD8A1A0048745D /* UIColor.swift in Sources */,
 				3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */,
 				3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */,
 				3F20EA2321C1C64700A1A179 /* UIViewController.swift in Sources */,
+				3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */,
 				3F29A22921BD886A0048745D /* UINavigationBar.swift in Sources */,
 				3F29A22421BC18490048745D /* FoodCell.swift in Sources */,
 				3F29A23321BD9AD00048745D /* UIGradientNavigationController.swift in Sources */,
