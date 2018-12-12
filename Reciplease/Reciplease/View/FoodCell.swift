@@ -21,15 +21,9 @@ class FoodCell: UICollectionViewCell {
     let foodLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor.purple
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    let separatorView: UIView = {
-       let view = UIView()
-        view.backgroundColor = UIColor.black
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
     }()
     
     // MARK: - Init
@@ -46,7 +40,7 @@ class FoodCell: UICollectionViewCell {
         addSubview(foodLabel)
         
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: iconImageView)
-        addConstraintsWithFormat(format: "V:|-4-[v0]-4-[v1(30)]-8-|", views: iconImageView, foodLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1(30)]-8-|", views: iconImageView, foodLabel)
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: foodLabel)
 
     }

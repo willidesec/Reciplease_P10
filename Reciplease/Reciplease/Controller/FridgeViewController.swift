@@ -28,6 +28,9 @@ class FridgeViewController: UIViewController {
 
 }
 
+
+
+
 // MARK: - EXTENSION
 extension FridgeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,20 +41,18 @@ extension FridgeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! FoodCell
         
         
-//        cell.foodLabel.text = array[indexPath.item]
+        cell.foodLabel.text = array[indexPath.item]
         
         
         return cell
-        
     }
-    
     
 }
 
 // Set the frame of the cell
 extension FridgeViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width / 3) - 2, height: 125)
+        return CGSize(width: (collectionView.frame.width / 3) - 2, height: 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
