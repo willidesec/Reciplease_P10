@@ -46,7 +46,7 @@ class FridgeViewController: UIViewController {
     
     
     // MARK: - Methods
-    private func addTextFieldToFridge() {
+    func addTextFieldToFridge() {
         guard let food = foodTextField.text, foodTextField.text != "" else {
             return
         }
