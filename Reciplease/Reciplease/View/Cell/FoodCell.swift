@@ -30,9 +30,14 @@ class FoodCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()
+        addCornerRadius()
     }
     
     // MARK: - Methods
+    
+    func addCornerRadius() {
+        layer.cornerRadius = 10
+    }
     
     func setUpViews() {
         backgroundColor = UIColor.red

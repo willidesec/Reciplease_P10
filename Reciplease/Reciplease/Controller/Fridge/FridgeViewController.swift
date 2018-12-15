@@ -20,6 +20,7 @@ class FridgeViewController: UIViewController {
     // MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.layer.cornerRadius = 10
         // Register FoodCell
         collectionView.register(FoodCell.self, forCellWithReuseIdentifier: FoodCell.identifier)
         
