@@ -22,7 +22,8 @@ class FridgeViewController: UIViewController {
     // MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(FoodCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(FoodCell.self, forCellWithReuseIdentifier: FoodCell.identifier)
+        print(FoodCell.identifier)
     }
     
     

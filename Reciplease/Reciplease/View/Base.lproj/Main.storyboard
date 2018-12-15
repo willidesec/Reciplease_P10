@@ -33,11 +33,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-Oz-dot">
                                                 <rect key="frame" x="0.0" y="69" width="300" height="107"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="adw-nJ-Yq2">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="adw-nJ-Yq2">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="42"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Eggs, Chicken, Milk..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rIt-eh-AYv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="219" height="42"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Qrj-aF-DQo"/>
+                                                                </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="light" returnKeyType="done"/>
@@ -45,9 +48,16 @@
                                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zAg-mZ-WoD"/>
                                                                 </connections>
                                                             </textField>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0e-rU-tXa">
+                                                                <rect key="frame" x="194" y="0.0" width="22" height="42"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGa-bl-FXC">
-                                                                <rect key="frame" x="243" y="0.0" width="57" height="42"/>
+                                                                <rect key="frame" x="240" y="0.0" width="60" height="42"/>
                                                                 <color key="backgroundColor" red="0.95686274510000002" green="0.36078431370000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="KPg-ww-rTd"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Add">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
