@@ -13,6 +13,7 @@
 		3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */; };
 		3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */; };
 		3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */; };
+		3F269EB521C5796100F49D5E /* FooterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F269EB421C5796100F49D5E /* FooterCollectionView.swift */; };
 		3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A21D21BC16CA0048745D /* FridgeViewController.swift */; };
 		3F29A22421BC18490048745D /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22321BC18490048745D /* FoodCell.swift */; };
 		3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22621BD84050048745D /* CAGradientLayer.swift */; };
@@ -44,6 +45,7 @@
 		3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+CollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		3F269EB421C5796100F49D5E /* FooterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionView.swift; sourceTree = "<group>"; };
 		3F29A21D21BC16CA0048745D /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		3F29A22321BC18490048745D /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		3F29A22621BD84050048745D /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				3F6422FA21B7B89F009F630C /* Main.storyboard */,
 				3F64230221B7B89F009F630C /* LaunchScreen.storyboard */,
 				3F29A22321BC18490048745D /* FoodCell.swift */,
+				3F269EB421C5796100F49D5E /* FooterCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */,
 				3F20EA2621C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift in Sources */,
+				3F269EB521C5796100F49D5E /* FooterCollectionView.swift in Sources */,
 				3F29A22B21BD8A1A0048745D /* UIColor.swift in Sources */,
 				3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */,
 				3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */,

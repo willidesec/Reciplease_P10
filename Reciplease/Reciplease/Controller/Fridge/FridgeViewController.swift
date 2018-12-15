@@ -11,19 +11,20 @@ import UIKit
 class FridgeViewController: UIViewController {
     
     // MARK: - Properties
-    let array = ["Lait", "Beurre", "Ammande", "Chocolat", "Banane", "Confiture", "Nutella", "Oeufs", "Pommes", "Poulet", "Frites", "Carottes", "Riz", "Yaourt", "Salade"]
     var fridge = [String]()
     
     // MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var foodTextField: UITextField!
     
     // MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Register FoodCell
         collectionView.register(FoodCell.self, forCellWithReuseIdentifier: FoodCell.identifier)
-        print(FoodCell.identifier)
+        
+        // Register FooterCollectionView
+        collectionView.register(FooterCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionView.identifier)
     }
     
     
