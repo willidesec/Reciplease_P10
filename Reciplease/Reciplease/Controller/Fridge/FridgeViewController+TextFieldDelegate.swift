@@ -11,6 +11,7 @@ import UIKit
 extension FridgeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         addTextFieldToFridge()
+        separateElementOfArray()
         collectionView.reloadData()
         return true
     }

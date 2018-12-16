@@ -21,17 +21,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIi-9i-XyM" customClass="UIRoundedView" customModule="Reciplease" customModuleProvider="target">
                                 <rect key="frame" x="10" y="80" width="300" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="cc0-xs-hWk">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="cc0-xs-hWk">
                                         <rect key="frame" x="10" y="10" width="280" height="180"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's in your fridge ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1c-YJ-pFR">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                                 <color key="textColor" red="0.92156862750000001" green="0.20000000000000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-Oz-dot">
-                                                <rect key="frame" x="0.0" y="71" width="280" height="109"/>
+                                                <rect key="frame" x="0.0" y="67" width="280" height="113"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="adw-nJ-Yq2">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
@@ -63,13 +63,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ruL-bo-pRh">
-                                                        <rect key="frame" x="0.0" y="69" width="280" height="40"/>
+                                                        <rect key="frame" x="0.0" y="69" width="280" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dk-Lf-FGb" customClass="UIRoundedButton" customModule="Reciplease" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="133" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="133" height="44"/>
                                                                 <color key="backgroundColor" red="0.95686274510000002" green="0.36078431370000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="yWN-Xf-kqP"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="yWN-Xf-kqP"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <state key="normal" title="Search">
@@ -80,7 +80,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itj-wB-KO6" customClass="UIRoundedButton" customModule="Reciplease" customModuleProvider="target">
-                                                                <rect key="frame" x="147" y="0.0" width="133" height="40"/>
+                                                                <rect key="frame" x="147" y="0.0" width="133" height="44"/>
                                                                 <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                 <state key="normal" title="Clear">

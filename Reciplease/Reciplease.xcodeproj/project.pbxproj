@@ -97,6 +97,13 @@
 			path = Fridge;
 			sourceTree = "<group>";
 		};
+		3F21AE2021C66805005163C3 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		3F269EB621C588A200F49D5E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +186,7 @@
 				3F6422F521B7B89F009F630C /* Reciplease */,
 				3F29A22521BD83D00048745D /* Extensions */,
 				3F29A23121BD9AA60048745D /* SubClasses */,
+				3F21AE2021C66805005163C3 /* Ressources */,
 				3F64230D21B7B89F009F630C /* RecipleaseTests */,
 				3F6422F421B7B89F009F630C /* Products */,
 			);

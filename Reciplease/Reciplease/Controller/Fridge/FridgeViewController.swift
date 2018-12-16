@@ -26,6 +26,8 @@ class FridgeViewController: UIViewController {
         
         // Register FooterCollectionView
         collectionView.register(FooterCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionView.identifier)
+        
+
     }
     
     
@@ -34,6 +36,7 @@ class FridgeViewController: UIViewController {
     // MARK: - IBAction
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
         addTextFieldToFridge()
+        separateElementOfArray()
         collectionView.reloadData()
     }
     
@@ -55,6 +58,10 @@ class FridgeViewController: UIViewController {
         }
         fridge.append(food)
         foodTextField.text = ""
+    }
+    
+    func separateElementOfArray() {
+        fridge = fridge.flatMap { $0.components(separatedBy: ", ") }
     }
     
     private func removeFoodFromFridge() {
