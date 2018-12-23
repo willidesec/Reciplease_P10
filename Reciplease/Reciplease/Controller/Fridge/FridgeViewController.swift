@@ -36,7 +36,6 @@ class FridgeViewController: UIViewController {
     // MARK: - IBAction
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
         addTextFieldToFridge()
-        separateElementOfArray()
         collectionView.reloadData()
     }
     
@@ -56,12 +55,8 @@ class FridgeViewController: UIViewController {
         guard let food = foodTextField.text, foodTextField.text != "" else {
             return
         }
-        fridge.append(food)
+        fridge += food.separateElementInArray()
         foodTextField.text = ""
-    }
-    
-    func separateElementOfArray() {
-        fridge = fridge.flatMap { $0.components(separatedBy: ", ") }
     }
     
     private func removeFoodFromFridge() {

@@ -13,6 +13,7 @@
 		3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */; };
 		3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */; };
 		3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */; };
+		3F22ACDB21CFED9B00066359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22ACDA21CFED9B00066359 /* String.swift */; };
 		3F269EB521C5796100F49D5E /* FooterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F269EB421C5796100F49D5E /* FooterCollectionView.swift */; };
 		3F269EB921C588DC00F49D5E /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F269EB821C588DC00F49D5E /* UIRoundedView.swift */; };
 		3F269EBB21C59A0100F49D5E /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F269EBA21C59A0100F49D5E /* UIRoundedButton.swift */; };
@@ -47,6 +48,7 @@
 		3F20EA2721C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+CollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		3F22ACDA21CFED9B00066359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3F269EB421C5796100F49D5E /* FooterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionView.swift; sourceTree = "<group>"; };
 		3F269EB821C588DC00F49D5E /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
 		3F269EBA21C59A0100F49D5E /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				3F20EA2021C1BB1300A1A179 /* UIView.swift */,
 				3F20EA2221C1C64700A1A179 /* UIViewController.swift */,
 				3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */,
+				3F22ACDA21CFED9B00066359 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */,
 				3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */,
 				3F269EBB21C59A0100F49D5E /* UIRoundedButton.swift in Sources */,
+				3F22ACDB21CFED9B00066359 /* String.swift in Sources */,
 				3F29A22921BD886A0048745D /* UINavigationBar.swift in Sources */,
 				3F29A22421BC18490048745D /* FoodCell.swift in Sources */,
 				3F29A23321BD9AD00048745D /* UIGradientNavigationController.swift in Sources */,
