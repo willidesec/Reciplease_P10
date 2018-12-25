@@ -19,7 +19,7 @@ extension FridgeViewController: UICollectionViewDataSource {
         
         
         cell.foodLabel.text = fridge[indexPath.item]
-        
+        cell.iconImageView.image = UIImage(named: fridge[indexPath.item])
         
         return cell
     }

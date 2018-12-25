@@ -13,14 +13,14 @@ class FoodCell: UICollectionViewCell {
     // MARK: - Property
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     let foodLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor.purple
+//        label.backgroundColor = UIColor.purple
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +41,7 @@ class FoodCell: UICollectionViewCell {
     }
     
     func setUpViews() {
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.redThemeColor
         addSubview(iconImageView)
         addSubview(foodLabel)
         
