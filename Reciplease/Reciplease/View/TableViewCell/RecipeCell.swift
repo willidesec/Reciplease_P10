@@ -11,6 +11,5 @@ import UIKit
 class RecipeCell: UITableViewCell {
     
     
-    let texte = "COUCOU"
 
 }
