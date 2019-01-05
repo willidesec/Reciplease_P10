@@ -12,6 +12,7 @@ class FridgeViewController: UIViewController {
     
     // MARK: - Properties
     var fridge = [String]()
+    let yummlyService = YummlyService()
     
     // MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,12 +27,8 @@ class FridgeViewController: UIViewController {
         
         // Register FooterCollectionView
         collectionView.register(FooterCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionView.identifier)
-        
 
     }
-    
-    
-    
     
     // MARK: - IBAction
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
@@ -40,6 +37,17 @@ class FridgeViewController: UIViewController {
     }
     
     @IBAction func searchButtonDidTapped(_ sender: UIButton) {
+        // Methode assez sécurisé ? Que se passe t'il si l'appel success mais que l'object est vide ?
+        // S'assurer que l'on ouvre pas le nouveau controller si l'objet est vide
+        yummlyService.searchRecipe { (success, searchResult) in
+            if success {
+                guard let searchResult = searchResult else { return }
+                self.displaySearchResultTableViewController(with: searchResult)
+            } else {
+                // TODO: Display Alert
+                print("error")
+            }
+        }
     }
     
     @IBAction func clearButtonDidTapped(_ sender: UIButton) {
@@ -47,20 +55,23 @@ class FridgeViewController: UIViewController {
         collectionView.reloadData()
     }
     
-    
-    
-    
     // MARK: - Methods
     func addTextFieldToFridge() {
         guard let food = foodTextField.text, foodTextField.text != "" else {
             return
         }
-        fridge += food.separateElementInArray()
+        fridge += food.separateElementAndReturnArray
         foodTextField.text = ""
     }
     
     private func removeFoodFromFridge() {
         fridge = []
+    }
+    
+    private func displaySearchResultTableViewController(with passingObject: SearchResult) {
+        let searchResultVC = SearchResultTableViewController()
+        searchResultVC.searchResult = passingObject
+        navigationController?.pushViewController(searchResultVC, animated: true)
     }
 
 }
