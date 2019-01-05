@@ -9,9 +9,9 @@
 import Foundation
 
 extension String {
-    
-    func separateElementInArray() -> [String] {
-        return self.components(separatedBy: .punctuationCharacters).joined().components(separatedBy: " ").filter { !$0.isEmpty }
+    var separateElementAndReturnArray: [String] {
+        get {
+            return self.components(separatedBy: .punctuationCharacters).joined().components(separatedBy: " ").filter { !$0.isEmpty }
+        }
     }
-    
 }

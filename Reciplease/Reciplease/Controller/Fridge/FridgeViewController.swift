@@ -12,6 +12,7 @@ class FridgeViewController: UIViewController {
     
     // MARK: - Properties
     var fridge = [String]()
+    let yummlyService = YummlyService()
     
     // MARK: - IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,12 +27,8 @@ class FridgeViewController: UIViewController {
         
         // Register FooterCollectionView
         collectionView.register(FooterCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionView.identifier)
-        
 
     }
-    
-    
-    
     
     // MARK: - IBAction
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
@@ -40,6 +37,11 @@ class FridgeViewController: UIViewController {
     }
     
     @IBAction func searchButtonDidTapped(_ sender: UIButton) {
+        yummlyService.searchRecipe { (success, searchResult) in
+            if success {
+                guard let searchResult = searchResult else { return }
+            }
+        }
     }
     
     @IBAction func clearButtonDidTapped(_ sender: UIButton) {
@@ -47,15 +49,12 @@ class FridgeViewController: UIViewController {
         collectionView.reloadData()
     }
     
-    
-    
-    
     // MARK: - Methods
     func addTextFieldToFridge() {
         guard let food = foodTextField.text, foodTextField.text != "" else {
             return
         }
-        fridge += food.separateElementInArray()
+        fridge += food.separateElementAndReturnArray
         foodTextField.text = ""
     }
     
