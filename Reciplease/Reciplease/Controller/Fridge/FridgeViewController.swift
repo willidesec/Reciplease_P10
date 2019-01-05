@@ -40,6 +40,7 @@ class FridgeViewController: UIViewController {
         yummlyService.searchRecipe { (success, searchResult) in
             if success {
                 guard let searchResult = searchResult else { return }
+                self.displaySearchResultTableViewController()
             }
         }
     }
@@ -60,6 +61,11 @@ class FridgeViewController: UIViewController {
     
     private func removeFoodFromFridge() {
         fridge = []
+    }
+    
+    private func displaySearchResultTableViewController() {
+        let searchResultVC = SearchResultTableViewController()
+        navigationController?.pushViewController(searchResultVC, animated: true)
     }
 
 }

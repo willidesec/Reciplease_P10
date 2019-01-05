@@ -20,7 +20,6 @@ class FoodCell: UICollectionViewCell {
     
     let foodLabel: UILabel = {
         let label = UILabel()
-//        label.backgroundColor = UIColor.purple
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
