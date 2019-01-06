@@ -33,10 +33,17 @@ class SearchResultTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipeCell.identifier, for: indexPath) as! RecipeCell
         
+        // Set separator for all screen
+//        cell.layoutMargins = UIEdgeInsets.zero
+        cell.separatorInset = UIEdgeInsets.zero
         
-        cell.textLabel?.text = searchResult.matches[indexPath.row].recipeName
+//        cell.textLabel?.text = searchResult.matches[indexPath.row].recipeName
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
     }
 
 
