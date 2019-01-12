@@ -15,19 +15,21 @@ class SearchResultTableViewController: UITableViewController {
     /*
      Methode assez sécurisé ?
      */
-    var searchResult: SearchResult!
+    var searchResult: SearchResult?
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(RecipeCell.self, forCellReuseIdentifier: RecipeCell.identifier)
         tableView.tableFooterView = UIView()
+        
+
 
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResult.matches.count
+        return searchResult?.matches.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,6 +40,8 @@ class SearchResultTableViewController: UITableViewController {
         cell.separatorInset = UIEdgeInsets.zero
         
 //        cell.textLabel?.text = searchResult.matches[indexPath.row].recipeName
+        guard let recipe = searchResult?.matches[indexPath.row] else { return UITableViewCell() }
+        cell.recipe = recipe
 
         return cell
     }

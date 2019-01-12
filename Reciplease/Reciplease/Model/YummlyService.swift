@@ -19,7 +19,7 @@ class YummlyService {
     let yummlyUrl = "http://api.yummly.com/v1/api/recipes?_app_id=5518c13f&_app_key=781f4dbcf40703ec5bdd1d709185e6ff&q=apple"
     
     func searchRecipe(callback: @escaping (Bool, SearchResult?) -> Void) {
-        let url = URL(string: yummlyUrl)!
+        guard let url = URL(string: yummlyUrl) else { return }
         yummlySession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
                 callback(false, nil)

@@ -12,21 +12,7 @@ class UIRoundedView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addCornerRadius()
-        addShadow()
+        addCornerRadius(of: 10)
+        addShadow(width: 3, height: 3, radius: 10, opacity: 0.2)
     }
-
-    
-    func addCornerRadius() {
-        layer.cornerRadius = 10
-        layer.masksToBounds = true
-    }
-    func addShadow() {
-        layer.masksToBounds = false
-        layer.shadowOffset = CGSize(width: 3, height: 3)
-        layer.shadowRadius = 10
-        layer.shadowOpacity = 0.2
-        
-    }
-    
 }
