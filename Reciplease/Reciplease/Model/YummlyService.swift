@@ -16,9 +16,8 @@ class YummlyService {
         self.yummlySession = yummlySession
     }
     
-    let yummlyUrl = "http://api.yummly.com/v1/api/recipes?_app_id=5518c13f&_app_key=781f4dbcf40703ec5bdd1d709185e6ff&q=apple"
-    
-    func searchRecipe(callback: @escaping (Bool, SearchResult?) -> Void) {
+    func searchRecipe(for ingredients: [String], callback: @escaping (Bool, SearchResult?) -> Void) {
+        let yummlyUrl = configureUrl(with: Constants.Yummly.URL, and: ingredients)
         guard let url = URL(string: yummlyUrl) else { return }
         yummlySession.request(url: url) { responseData in
             guard responseData.response?.statusCode == 200 else {
@@ -40,4 +39,16 @@ class YummlyService {
         }
     }
     
+    fileprivate func configureUrl(with url: String, and ingredients: [String]) -> String {
+        var parameters = "&q="
+        for ingredient in ingredients {
+            if ingredient == ingredients.last {
+                parameters += ingredient
+            } else {
+                parameters += "\(ingredient)+"
+            }
+        }
+        let yummlyUrl = url + parameters
+        return yummlyUrl
+    }
 }

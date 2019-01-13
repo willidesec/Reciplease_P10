@@ -36,7 +36,7 @@ class RecipeCell: UITableViewCell {
         view.addShadow(width: 3, height: 3, radius: 10, opacity: 0.2)
         return view
     }()
-    
+    // The image don't have the corner radius of the bgView
     let recipeImage: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
