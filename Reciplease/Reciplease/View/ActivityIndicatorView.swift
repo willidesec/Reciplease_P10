@@ -12,7 +12,7 @@ class ActivityIndicatorView: UIView {
     
     let bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         return view
     }()
     

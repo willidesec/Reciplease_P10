@@ -72,7 +72,7 @@ class FridgeViewController: UIViewController {
         fridge = []
     }
     
-    private func displaySearchResultTableViewController(with passingObject: SearchResult) {
+    private func displaySearchResultTableViewController(with passingObject: SearchRecipe) {
         let searchResultVC = SearchResultTableViewController()
         searchResultVC.searchResult = passingObject
         navigationController?.pushViewController(searchResultVC, animated: true)

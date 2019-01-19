@@ -11,11 +11,8 @@ import UIKit
 class SearchResultTableViewController: UITableViewController {
     
     // MARK: - Properties
-    
-    /*
-     Methode assez sécurisé ?
-     */
-    var searchResult: SearchResult?
+    var searchResult: SearchRecipe?
+    let yummlyService = YummlyService()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -44,11 +41,32 @@ class SearchResultTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let activityIndicatorView = ActivityIndicatorView()
+        toggleActivityIndicator(with: activityIndicatorView, shown: true)
+        guard let id = searchResult?.matches[indexPath.row].id else { return }
+        yummlyService.getRecipe(with: id) { (success, recipeDetail) in
+            self.toggleActivityIndicator(with: activityIndicatorView, shown: false)
+            if success {
+                guard let recipeDetail = recipeDetail else { return }
+                print(recipeDetail.name)
+                self.displayDetailRecipeViewController(with: recipeDetail)
+            } else {
+                // TODO: Display Alert
+                print("error")
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
-
-
-
+    
+    // MARK: - Methods
+    private func displayDetailRecipeViewController(with passingObject: RecipeDetail) {
+//        let detailRecipeVC = DetailRecipeViewController()
+//        detailRecipeVC.recipeDetail = passingObject
+//        navigationController?.pushViewController(searchResultVC, animated: true)
+    }
 
 }

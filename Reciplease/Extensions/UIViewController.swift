@@ -17,8 +17,9 @@ extension UIViewController {
     
     func toggleActivityIndicator(with activityIndicatorView: ActivityIndicatorView, shown: Bool) {
         if shown == true {
-            view.addSubview(activityIndicatorView)
-            activityIndicatorView.setAnchors(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+            guard let window = UIApplication.shared.keyWindow else { return }
+            window.addSubview(activityIndicatorView)
+            activityIndicatorView.setAnchors(top: window.topAnchor, leading: window.leadingAnchor, bottom: window.bottomAnchor, trailing: window.trailingAnchor)
             activityIndicatorView.alpha = 0.0
             UIView.animate(withDuration: 0.3) {
                 activityIndicatorView.activityIndicator.startAnimating()
