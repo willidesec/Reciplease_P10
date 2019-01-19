@@ -11,10 +11,12 @@ import UIKit
 class DetailRecipeViewController: UIViewController {
     
     // MARK: - Properties
-//    let recipeDetail: RecipeDetail?
+    var recipeDetail: RecipeDetail?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let recipeDetail = recipeDetail else { return }
+        print(recipeDetail.name)
 
     }
 

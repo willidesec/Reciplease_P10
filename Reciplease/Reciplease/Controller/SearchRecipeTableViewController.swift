@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchResultTableViewController: UITableViewController {
+class SearchRecipeTableViewController: UITableViewController {
     
     // MARK: - Properties
     var searchResult: SearchRecipe?
@@ -49,7 +49,6 @@ class SearchResultTableViewController: UITableViewController {
             self.toggleActivityIndicator(with: activityIndicatorView, shown: false)
             if success {
                 guard let recipeDetail = recipeDetail else { return }
-                print(recipeDetail.name)
                 self.displayDetailRecipeViewController(with: recipeDetail)
             } else {
                 // TODO: Display Alert
@@ -64,9 +63,10 @@ class SearchResultTableViewController: UITableViewController {
     
     // MARK: - Methods
     private func displayDetailRecipeViewController(with passingObject: RecipeDetail) {
-//        let detailRecipeVC = DetailRecipeViewController()
-//        detailRecipeVC.recipeDetail = passingObject
-//        navigationController?.pushViewController(searchResultVC, animated: true)
+        let detailRecipeVC = DetailRecipeViewController()
+        detailRecipeVC.recipeDetail = passingObject
+        detailRecipeVC.view.backgroundColor = UIColor.white
+        navigationController?.pushViewController(detailRecipeVC, animated: true)
     }
 
 }

@@ -54,7 +54,6 @@ class YummlyService {
         }
         
         let yummlyUrl = url + parameters + allowedIngredients
-        print(yummlyUrl)
         return yummlyUrl
     }
     
