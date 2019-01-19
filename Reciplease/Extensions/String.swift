@@ -14,4 +14,8 @@ extension String {
             return self.components(separatedBy: .punctuationCharacters).joined().components(separatedBy: " ").filter { !$0.isEmpty }
         }
     }
+    
+    func dropTwoLastAndReplaceWith(_ characters: String) -> String {
+        return self.dropLast(2) + characters
+    }
 }

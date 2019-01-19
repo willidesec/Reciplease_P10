@@ -14,7 +14,8 @@ struct SearchResult: Decodable {
 }
 
 struct Recipe: Decodable {
-    let imageUrlsBySize: [String: String]
+    // A remplacer par smallImage et changer la size (optional) prévoir image par default
+    let smallImageUrls: [String]
     let ingredients: [String]
     let recipeName: String
     let totalTimeInSeconds: Int

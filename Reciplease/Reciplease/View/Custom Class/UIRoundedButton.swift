@@ -12,11 +12,6 @@ class UIRoundedButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addCornerRadius()
+        addCornerRadius(of: 5)
     }
-    
-    func addCornerRadius() {
-        layer.cornerRadius = 5
-    }
-    
 }

@@ -10,6 +10,20 @@ import UIKit
 
 extension UIView {
     
+    func addCornerRadius(of radius: CGFloat) {
+        layer.cornerRadius = radius
+    }
+    
+    func addShadow(width: Int, height: Int, radius: CGFloat, opacity: Float) {
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: width, height: height)
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+    }
+}
+
+extension UIView {
+    
     func addConstraintsWithFormat(format: String, views: UIView...) {
         
         var viewsDict = [String: UIView]()
@@ -44,6 +58,12 @@ extension UIView {
     
     func squareRatio() {
         widthAnchor.constraint(equalTo: heightAnchor).isActive = true
+    }
+    
+    func center(to view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     var safeTopAnchor: NSLayoutYAxisAnchor {
