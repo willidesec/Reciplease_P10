@@ -43,12 +43,18 @@ class YummlyService {
         var parameters = "&q="
         for ingredient in ingredients {
             if ingredient == ingredients.last {
-                parameters += ingredient
+                parameters += ingredient.lowercased()
             } else {
                 parameters += "\(ingredient)+"
             }
         }
-        let yummlyUrl = url + parameters
+        var allowedIngredients = ""
+        for ingredient in ingredients {
+            allowedIngredients += "&allowedIngredient[]=\(ingredient.lowercased())"
+        }
+        
+        let yummlyUrl = url + parameters + allowedIngredients
+        print(yummlyUrl)
         return yummlyUrl
     }
 }

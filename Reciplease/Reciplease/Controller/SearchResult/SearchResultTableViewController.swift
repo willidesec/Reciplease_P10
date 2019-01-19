@@ -36,10 +36,8 @@ class SearchResultTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipeCell.identifier, for: indexPath) as! RecipeCell
         
         // Set separator for all screen
-//        cell.layoutMargins = UIEdgeInsets.zero
         cell.separatorInset = UIEdgeInsets.zero
         
-//        cell.textLabel?.text = searchResult.matches[indexPath.row].recipeName
         guard let recipe = searchResult?.matches[indexPath.row] else { return UITableViewCell() }
         cell.recipe = recipe
 
