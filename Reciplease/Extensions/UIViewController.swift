@@ -14,4 +14,23 @@ extension UIViewController {
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    func toggleActivityIndicator(with activityIndicatorView: ActivityIndicatorView, shown: Bool) {
+        if shown == true {
+            view.addSubview(activityIndicatorView)
+            activityIndicatorView.setAnchors(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+            activityIndicatorView.alpha = 0.0
+            UIView.animate(withDuration: 0.3) {
+                activityIndicatorView.activityIndicator.startAnimating()
+                activityIndicatorView.alpha = 1.0
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                activityIndicatorView.alpha = 0.0
+                activityIndicatorView.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    
 }

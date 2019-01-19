@@ -16,13 +16,20 @@ class ActivityIndicatorView: UIView {
         return view
     }()
     
+    let activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         [bgView].forEach() { addSubview($0) }
-        
         bgView.setAnchors(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
         
+        [activityIndicator].forEach() { bgView.addSubview($0) }
+        activityIndicator.center(to: bgView)
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
