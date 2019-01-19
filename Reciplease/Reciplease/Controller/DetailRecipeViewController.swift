@@ -12,12 +12,28 @@ class DetailRecipeViewController: UIViewController {
     
     // MARK: - Properties
     var recipeDetail: RecipeDetail?
+    
+    // MARK: - View
+    let recipeDetailView = RecipeDetailView()
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let recipeDetail = recipeDetail else { return }
-        print(recipeDetail.name)
+        
+        setupUI()
 
+    }
+    
+    
+    // MARK: - Methods
+    fileprivate func setupUI() {
+        
+        view.backgroundColor = UIColor.white
+
+        view.addSubview(recipeDetailView)
+        recipeDetailView.setAnchors(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        guard let recipeDetail = recipeDetail else { return }
+        recipeDetailView.nameLabel.text = recipeDetail.name
     }
 
 }

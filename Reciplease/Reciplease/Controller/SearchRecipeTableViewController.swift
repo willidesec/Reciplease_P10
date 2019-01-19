@@ -34,6 +34,7 @@ class SearchRecipeTableViewController: UITableViewController {
         
         // Set separator for all screen
         cell.separatorInset = UIEdgeInsets.zero
+        cell.selectionStyle = .none
         
         guard let recipe = searchResult?.matches[indexPath.row] else { return UITableViewCell() }
         cell.recipe = recipe
@@ -65,7 +66,6 @@ class SearchRecipeTableViewController: UITableViewController {
     private func displayDetailRecipeViewController(with passingObject: RecipeDetail) {
         let detailRecipeVC = DetailRecipeViewController()
         detailRecipeVC.recipeDetail = passingObject
-        detailRecipeVC.view.backgroundColor = UIColor.white
         navigationController?.pushViewController(detailRecipeVC, animated: true)
     }
 
