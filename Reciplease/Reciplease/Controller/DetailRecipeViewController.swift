@@ -14,7 +14,23 @@ class DetailRecipeViewController: UIViewController {
     var recipeDetail: RecipeDetail?
     
     // MARK: - View
-    let recipeDetailView = RecipeDetailView()
+    let recipeInfosView = RecipeInfosView()
+    
+    lazy var recipeImageView: UIImageView = {
+        let imageView = UIImageView()
+        guard let imageUrl = recipeDetail?.images[0].hostedLargeUrl else {
+            return UIImageView()
+        }
+        guard let url = URL(string: imageUrl) else {
+            return UIImageView()
+        }
+        guard let data = try? Data(contentsOf: url) else {
+            return UIImageView()
+        }
+        imageView.image = UIImage(data: data)
+        imageView.contentMode = .scaleToFill
+        return imageView
+    }()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -29,11 +45,27 @@ class DetailRecipeViewController: UIViewController {
     fileprivate func setupUI() {
         
         view.backgroundColor = UIColor.white
+        
+        [recipeImageView, recipeInfosView].forEach() { view.addSubview($0) }
+        recipeImageView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, size: CGSize(width: 0, height: 200))
+        
 
-        view.addSubview(recipeDetailView)
-        recipeDetailView.setAnchors(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        /* NOT SAFE
+         Si il n'y a pas de constraints alors crash de l'appli
+         */
+        let heightConstraintImage = recipeImageView.constraints[0].constant
+        recipeInfosView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: (heightConstraintImage / 1.5), left: 15, bottom: 0, right: 15), size: CGSize(width: 0, height: heightConstraintImage))
+        
+        
+        recipeInfosView.backgroundColor = .white
+        recipeInfosView.addCornerRadius(of: 25)
+        recipeInfosView.addShadow(width: 3, height: 3, radius: 10, opacity: 0.2)
+        
         guard let recipeDetail = recipeDetail else { return }
-        recipeDetailView.nameLabel.text = recipeDetail.name
+        recipeInfosView.nameLabel.text = recipeDetail.name
+        
+        recipeInfosView.detailView.durationLabel.text = recipeDetail.totalTime
+        
     }
 
 }
