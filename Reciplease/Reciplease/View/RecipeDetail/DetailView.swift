@@ -20,7 +20,7 @@ class DetailView: UIView {
     let durationLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.lightGray
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
         label.numberOfLines = 1
         return label
@@ -45,9 +45,10 @@ class DetailView: UIView {
     let servingLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.lightGray
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
         label.numberOfLines = 1
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -63,16 +64,17 @@ class DetailView: UIView {
     let energeticValueImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "weight")
+        imageView.image = UIImage(named: "kcal")
         return imageView
     }()
     
     let energeticValueLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.lightGray
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.textAlignment = .center
         label.numberOfLines = 1
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -88,7 +90,7 @@ class DetailView: UIView {
     lazy var detailStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [durationStackView, servingStackView, energeticValueStackView])
         stackView.axis = .horizontal
-        stackView.spacing = 20
+        stackView.spacing = 10
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         return stackView
@@ -100,6 +102,9 @@ class DetailView: UIView {
         
         [detailStackView].forEach() { addSubview($0) }
         detailStackView.setAnchors(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        timeImageView.squareRatio()
+        servingImageView.squareRatio()
+        energeticValueImageView.squareRatio()
         
     }
     

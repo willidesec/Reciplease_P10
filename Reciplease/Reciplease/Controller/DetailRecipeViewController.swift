@@ -40,21 +40,22 @@ class DetailRecipeViewController: UIViewController {
 
     }
     
-    
     // MARK: - Methods
     fileprivate func setupUI() {
         
         view.backgroundColor = UIColor.white
         
         [recipeImageView, recipeInfosView].forEach() { view.addSubview($0) }
-        recipeImageView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, size: CGSize(width: 0, height: 200))
+        
+        let imageViewHeight = view.frame.height / 4
+        recipeImageView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, size: CGSize(width: 0, height: imageViewHeight))
         
 
-        /* NOT SAFE
-         Si il n'y a pas de constraints alors crash de l'appli
-         */
-        let heightConstraintImage = recipeImageView.constraints[0].constant
-        recipeInfosView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: (heightConstraintImage / 1.5), left: 15, bottom: 0, right: 15), size: CGSize(width: 0, height: heightConstraintImage))
+        recipeInfosView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: (imageViewHeight / 1.5), left: 15, bottom: 0, right: 15), size: CGSize(width: 0, height: imageViewHeight))
+        
+        recipeInfosView.nameLabel.setAnchors(top: recipeInfosView.topAnchor, leading: recipeInfosView.leadingAnchor, bottom: nil, trailing: recipeInfosView.trailingAnchor, padding: UIEdgeInsets(top: 15, left: 20, bottom: 0, right: 20), size: CGSize(width: 0, height: (imageViewHeight / 2) - 15))
+        
+        recipeInfosView.detailView.setAnchors(top: recipeInfosView.nameLabel.bottomAnchor, leading: recipeInfosView.leadingAnchor, bottom: recipeInfosView.bottomAnchor, trailing: recipeInfosView.trailingAnchor, padding: UIEdgeInsets(top: 15, left: 25, bottom: 15, right: 25))
         
         
         recipeInfosView.backgroundColor = .white
@@ -65,6 +66,10 @@ class DetailRecipeViewController: UIViewController {
         recipeInfosView.nameLabel.text = recipeDetail.name
         
         recipeInfosView.detailView.durationLabel.text = recipeDetail.totalTime
+        let servings = String(recipeDetail.numberOfServings)
+        recipeInfosView.detailView.servingLabel.text = "\(servings) servings"
+        let calories = String(recipeDetail.nutritionEstimates[0].value)
+        recipeInfosView.detailView.energeticValueLabel.text = "\(calories) kcal"
         
     }
 

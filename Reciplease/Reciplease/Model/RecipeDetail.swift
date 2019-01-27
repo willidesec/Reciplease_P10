@@ -14,8 +14,14 @@ struct RecipeDetail: Decodable {
     let ingredientLines: [String]
     let images: [Image]
     let rating: Int
+    let numberOfServings: Int
+    let nutritionEstimates: [NutritionEstimates]
 }
 
 struct Image: Decodable {
     let hostedLargeUrl: String
+}
+
+struct NutritionEstimates: Decodable {
+    let value: Float
 }

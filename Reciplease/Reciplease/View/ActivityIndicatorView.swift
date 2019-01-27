@@ -18,6 +18,7 @@ class ActivityIndicatorView: UIView {
     
     let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
+        view.startAnimating()
         return view
     }()
     
