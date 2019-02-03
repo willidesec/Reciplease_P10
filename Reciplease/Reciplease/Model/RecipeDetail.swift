@@ -25,3 +25,9 @@ struct Image: Decodable {
 struct NutritionEstimates: Decodable {
     let value: Float
 }
+
+// OBJECT custom a passer dans le prochain controller
+struct CustomObject {
+    let recipeDetail: RecipeDetail
+    let ingredients: [String]
+}
