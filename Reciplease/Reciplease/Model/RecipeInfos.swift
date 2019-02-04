@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct RecipeDetail: Decodable {
+struct RecipeDetail {
+    var recipeInfos: RecipeInfos
+    var ingredients: [String]
+}
+
+struct RecipeInfos: Decodable {
     let totalTime: String
     let name: String
     let ingredientLines: [String]
@@ -24,10 +29,4 @@ struct Image: Decodable {
 
 struct NutritionEstimates: Decodable {
     let value: Float
-}
-
-// OBJECT custom a passer dans le prochain controller
-struct CustomObject {
-    let recipeDetail: RecipeDetail
-    let ingredients: [String]
 }

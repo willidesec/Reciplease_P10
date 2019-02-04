@@ -57,7 +57,7 @@ class YummlyService {
         return yummlyUrl
     }
     
-    func getRecipe(with id: String, callback: @escaping (Bool, RecipeDetail?) -> Void) {
+    func getRecipe(with id: String, and ingredients: [String], callback: @escaping (Bool, RecipeDetail?) -> Void) {
         let yummlyUrl = "http://api.yummly.com/v1/api/recipe/\(id)?_app_id=5518c13f&_app_key=781f4dbcf40703ec5bdd1d709185e6ff"
         guard let url = URL(string: yummlyUrl) else { return }
         yummlySession.request(url: url) { responseData in
@@ -71,11 +71,11 @@ class YummlyService {
                 return
             }
             
-            guard let recipeDetail = try? JSONDecoder().decode(RecipeDetail.self, from: data) else {
+            guard let recipeInfos = try? JSONDecoder().decode(RecipeInfos.self, from: data) else {
                 callback(false, nil)
                 return
             }
-            
+            let recipeDetail = RecipeDetail(recipeInfos: recipeInfos, ingredients: ingredients)
             callback(true, recipeDetail)
         }
     }

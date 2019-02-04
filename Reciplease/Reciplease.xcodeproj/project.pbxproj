@@ -43,7 +43,7 @@
 		3F64230121B7B89F009F630C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F64230021B7B89F009F630C /* Assets.xcassets */; };
 		3F64230421B7B89F009F630C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64230221B7B89F009F630C /* LaunchScreen.storyboard */; };
 		3F64230F21B7B89F009F630C /* RecipleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64230E21B7B89F009F630C /* RecipleaseTests.swift */; };
-		3FB2045121F3927A0074EA03 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2045021F3927A0074EA03 /* RecipeDetail.swift */; };
+		3FB2045121F3927A0074EA03 /* RecipeInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2045021F3927A0074EA03 /* RecipeInfos.swift */; };
 		3FB2045321F39DA00074EA03 /* DetailRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2045221F39DA00074EA03 /* DetailRecipeViewController.swift */; };
 		3FB2045921F3A2120074EA03 /* RecipeInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2045821F3A2120074EA03 /* RecipeInfosView.swift */; };
 		DD1B0A2E4EAF6022E395A0A1 /* Pods_Reciplease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5B039F5D13055B65638DE9 /* Pods_Reciplease.framework */; };
@@ -102,7 +102,7 @@
 		3F64230A21B7B89F009F630C /* RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F64230E21B7B89F009F630C /* RecipleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseTests.swift; sourceTree = "<group>"; };
 		3F64231021B7B89F009F630C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FB2045021F3927A0074EA03 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		3FB2045021F3927A0074EA03 /* RecipeInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfos.swift; sourceTree = "<group>"; };
 		3FB2045221F39DA00074EA03 /* DetailRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeViewController.swift; sourceTree = "<group>"; };
 		3FB2045821F3A2120074EA03 /* RecipeInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfosView.swift; sourceTree = "<group>"; };
 		C696CB339C6BDE47CA29276D /* Pods-RecipleaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipleaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipleaseTests/Pods-RecipleaseTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 				3F2583A421DBE3080086634F /* YummlySession.swift */,
 				3F2783DE21D2D93A00E56CC1 /* YummlyService.swift */,
 				3F2583A621DBE9B60086634F /* SearchRecipe.swift */,
-				3FB2045021F3927A0074EA03 /* RecipeDetail.swift */,
+				3FB2045021F3927A0074EA03 /* RecipeInfos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -555,7 +555,7 @@
 				3F287BAB21EBC4B900081B90 /* ActivityIndicatorView.swift in Sources */,
 				3F2783DF21D2D93A00E56CC1 /* YummlyService.swift in Sources */,
 				3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */,
-				3FB2045121F3927A0074EA03 /* RecipeDetail.swift in Sources */,
+				3FB2045121F3927A0074EA03 /* RecipeInfos.swift in Sources */,
 				3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */,
 				3FB2045321F39DA00074EA03 /* DetailRecipeViewController.swift in Sources */,
 				3F2C5DB921FE0648006B0F28 /* DetailRecipeDelegate.swift in Sources */,

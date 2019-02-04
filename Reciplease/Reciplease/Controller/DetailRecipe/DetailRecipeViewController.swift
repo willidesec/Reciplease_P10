@@ -19,7 +19,7 @@ class DetailRecipeViewController: UIViewController {
     
     lazy var recipeImageView: UIImageView = {
         let imageView = UIImageView()
-        guard let imageUrl = recipeDetail?.images[0].hostedLargeUrl else {
+        guard let imageUrl = recipeDetail?.recipeInfos.images[0].hostedLargeUrl else {
             return UIImageView()
         }
         guard let url = URL(string: imageUrl) else {
@@ -55,15 +55,15 @@ class DetailRecipeViewController: UIViewController {
         infosView.addShadow(width: 3, height: 3, radius: 10, opacity: 0.2)
         
         guard let recipeDetail = recipeDetail else { return }
-        infosView.nameLabel.text = recipeDetail.name
-        infosView.detailView.durationLabel.text = recipeDetail.totalTime
-        let servings = String(recipeDetail.numberOfServings)
+        infosView.nameLabel.text = recipeDetail.recipeInfos.name
+        infosView.detailView.durationLabel.text = recipeDetail.recipeInfos.totalTime
+        let servings = String(recipeDetail.recipeInfos.numberOfServings)
         infosView.detailView.servingLabel.text = "\(servings) servings"
         
-        if recipeDetail.nutritionEstimates.isEmpty {
+        if recipeDetail.recipeInfos.nutritionEstimates.isEmpty {
             infosView.detailView.energeticValueLabel.text = Constants.NO_VALUE
         } else {
-            let calories = recipeDetail.nutritionEstimates[0].value
+            let calories = recipeDetail.recipeInfos.nutritionEstimates[0].value
             infosView.detailView.energeticValueLabel.text = "\(String(calories)) kcal"
         }
         
