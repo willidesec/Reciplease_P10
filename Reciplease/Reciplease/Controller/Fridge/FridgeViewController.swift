@@ -38,10 +38,10 @@ class FridgeViewController: UIViewController {
     }
     
     @IBAction func searchButtonDidTapped(_ sender: UIButton) {
-        let activityIndicatorView = ActivityIndicatorView()
-        toggleActivityIndicator(with: activityIndicatorView, shown: true)
+        let loadingScreen = LoadingScreen()
+        loadingScreen.startLoading()
         yummlyService.searchRecipe(for: fridge) { (success, searchResult) in
-            self.toggleActivityIndicator(with: activityIndicatorView, shown: false)
+            loadingScreen.stopLoading()
             if success {
                 guard let searchResult = searchResult else { return }
                 self.displaySearchResultTableViewController(with: searchResult)

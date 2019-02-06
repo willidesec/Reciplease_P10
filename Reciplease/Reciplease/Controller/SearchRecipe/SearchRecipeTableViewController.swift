@@ -43,13 +43,13 @@ class SearchRecipeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let activityIndicatorView = ActivityIndicatorView()
-        toggleActivityIndicator(with: activityIndicatorView, shown: true)
+        let loadinScreen = LoadingScreen()
+        loadinScreen.startLoading()
         guard let searchResult = searchResult else { return }
         let id = searchResult.matches[indexPath.row].id
         let ingredients = searchResult.matches[indexPath.row].ingredients
         yummlyService.getRecipe(with: id, and: ingredients) { (success, recipeDetail) in
-            self.toggleActivityIndicator(with: activityIndicatorView, shown: false)
+            loadinScreen.stopLoading()
             if success {
                 guard let recipeDetail = recipeDetail else { return }
                 self.displayDetailRecipeViewController(with: recipeDetail)

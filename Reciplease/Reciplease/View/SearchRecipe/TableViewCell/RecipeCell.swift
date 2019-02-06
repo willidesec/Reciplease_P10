@@ -84,6 +84,13 @@ class RecipeCell: UITableViewCell {
         return label
     }()
     
+    let durationBackgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.addCornerRadius(of: 20)
+        return view
+    }()
+    
     let durationLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
@@ -92,7 +99,7 @@ class RecipeCell: UITableViewCell {
     }()
     
     lazy var durationAndRatingStackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [self.ratingLabel, self.durationLabel])
+        let stack = UIStackView(arrangedSubviews: [ratingLabel, durationBackgroundView])
         stack.distribution = .fillEqually
         stack.axis = .horizontal
         stack.spacing = 10

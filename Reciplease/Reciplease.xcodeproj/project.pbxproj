@@ -27,7 +27,7 @@
 		3F269EBB21C59A0100F49D5E /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F269EBA21C59A0100F49D5E /* UIRoundedButton.swift */; };
 		3F2783DF21D2D93A00E56CC1 /* YummlyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2783DE21D2D93A00E56CC1 /* YummlyService.swift */; };
 		3F287BA921EBBF4800081B90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F287BA821EBBF4800081B90 /* Constants.swift */; };
-		3F287BAB21EBC4B900081B90 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F287BAA21EBC4B900081B90 /* ActivityIndicatorView.swift */; };
+		3F287BAB21EBC4B900081B90 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F287BAA21EBC4B900081B90 /* LoadingScreen.swift */; };
 		3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A21D21BC16CA0048745D /* FridgeViewController.swift */; };
 		3F29A22421BC18490048745D /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22321BC18490048745D /* FoodCell.swift */; };
 		3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F29A22621BD84050048745D /* CAGradientLayer.swift */; };
@@ -82,7 +82,7 @@
 		3F269EBA21C59A0100F49D5E /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		3F2783DE21D2D93A00E56CC1 /* YummlyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummlyService.swift; sourceTree = "<group>"; };
 		3F287BA821EBBF4800081B90 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3F287BAA21EBC4B900081B90 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		3F287BAA21EBC4B900081B90 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		3F29A21D21BC16CA0048745D /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		3F29A22321BC18490048745D /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		3F29A22621BD84050048745D /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 			children = (
 				3F6422FA21B7B89F009F630C /* Main.storyboard */,
 				3F64230221B7B89F009F630C /* LaunchScreen.storyboard */,
+				3F287BAA21EBC4B900081B90 /* LoadingScreen.swift */,
 				3F269EB721C588B200F49D5E /* Custom Class */,
-				3F287BAA21EBC4B900081B90 /* ActivityIndicatorView.swift */,
 				3FB2045421F39F750074EA03 /* Fridge */,
 				3FB2045521F39F830074EA03 /* SearchRecipe */,
 				3FB2045721F39FD30074EA03 /* RecipeDetail */,
@@ -552,7 +552,7 @@
 				3F269EB921C588DC00F49D5E /* UIRoundedView.swift in Sources */,
 				3F2C5DB721FE0327006B0F28 /* IngredientCell.swift in Sources */,
 				3F2630A621F5004300C0B5A4 /* DetailView.swift in Sources */,
-				3F287BAB21EBC4B900081B90 /* ActivityIndicatorView.swift in Sources */,
+				3F287BAB21EBC4B900081B90 /* LoadingScreen.swift in Sources */,
 				3F2783DF21D2D93A00E56CC1 /* YummlyService.swift in Sources */,
 				3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */,
 				3FB2045121F3927A0074EA03 /* RecipeInfos.swift in Sources */,
