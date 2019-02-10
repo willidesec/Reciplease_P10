@@ -10,10 +10,10 @@ import Foundation
 
 struct SearchRecipe: Decodable {
     let totalMatchCount : Int
-    var matches: [Recipe]
+    var matches: [Infos]
 }
 
-struct Recipe: Decodable {
+struct Infos: Decodable {
     // TODO: prévoir image par default
     let smallImageUrls: [String]
     let ingredients: [String]

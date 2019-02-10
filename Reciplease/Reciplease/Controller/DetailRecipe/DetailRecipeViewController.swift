@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol FavoriteRecipeDelegate {
+    func saveRecipeToFavorite(recipe: RecipeDetail)
+}
+
 class DetailRecipeViewController: UIViewController {
     
     // MARK: - Properties
     var recipeDetail: RecipeDetail?
+    var favoriteRecipeDelegate: FavoriteRecipeDelegate!
     
     // MARK: - View
     let infosView = RecipeInfosView()
@@ -38,10 +43,29 @@ class DetailRecipeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
-        
+        setupNavigationBar()
+    }
+    
+    // MARK: - Action
+    @objc func favoriteButtonDidTapped() {
+        guard let recipeDetail = recipeDetail else { return }
+        favoriteRecipeDelegate.saveRecipeToFavorite(recipe: recipeDetail)
     }
     
     // MARK: - Methods
+    fileprivate func setupNavigationBar() {
+        let favoriteButton: UIButton = {
+           let button = UIButton(type: .system)
+            button.setImage(UIImage(named: "heart"), for: .normal)
+            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+            button.addTarget(self, action: #selector(favoriteButtonDidTapped), for: .touchUpInside)
+            return button
+        }()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favoriteButton)
+        favoriteButton.squareRatio()
+    }
+    
     fileprivate func setupUI() {
         
         view.backgroundColor = UIColor.white

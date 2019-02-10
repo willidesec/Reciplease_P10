@@ -16,6 +16,11 @@
 		3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */; };
 		3F22ACDB21CFED9B00066359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22ACDA21CFED9B00066359 /* String.swift */; };
 		3F23279C22107DBE004D884D /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23279B22107DBE004D884D /* Integer.swift */; };
+		3F2327A122109110004D884D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2327A022109110004D884D /* Recipe.swift */; };
+		3F2437352210CB7F0058F6C4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2437342210CB7F0058F6C4 /* FavoriteViewController.swift */; };
+		3F2437372210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2437362210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift */; };
+		3F2437392210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2437382210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift */; };
+		3F24373C2210CE3D0058F6C4 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24373B2210CE3D0058F6C4 /* FavoriteCell.swift */; };
 		3F24F2CC21E10D1E009365CB /* SearchRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2CB21E10D1E009365CB /* SearchRecipeTableViewController.swift */; };
 		3F24F2CE21E10EFF009365CB /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2CD21E10EFF009365CB /* UITableViewCell.swift */; };
 		3F24F2D121E10FDF009365CB /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2D021E10FDF009365CB /* RecipeCell.swift */; };
@@ -72,6 +77,11 @@
 		3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 		3F22ACDA21CFED9B00066359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3F23279B22107DBE004D884D /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
+		3F2327A022109110004D884D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		3F2437342210CB7F0058F6C4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		3F2437362210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		3F2437382210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		3F24373B2210CE3D0058F6C4 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		3F24F2CB21E10D1E009365CB /* SearchRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeTableViewController.swift; sourceTree = "<group>"; };
 		3F24F2CD21E10EFF009365CB /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		3F24F2D021E10FDF009365CB /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
@@ -160,6 +170,52 @@
 			path = Ressources;
 			sourceTree = "<group>";
 		};
+		3F23279D22108DB2004D884D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3F6422FD21B7B89F009F630C /* Reciplease.xcdatamodeld */,
+				3F2327A022109110004D884D /* Recipe.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3F23279E22108DC1004D884D /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				3F2583A221DBE1F40086634F /* YummlyProtocol.swift */,
+				3F2583A421DBE3080086634F /* YummlySession.swift */,
+				3F2783DE21D2D93A00E56CC1 /* YummlyService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		3F23279F22108DE3004D884D /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				3F2583A621DBE9B60086634F /* SearchRecipe.swift */,
+				3FB2045021F3927A0074EA03 /* RecipeInfos.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		3F2327A222109642004D884D /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				3F2437342210CB7F0058F6C4 /* FavoriteViewController.swift */,
+				3F2437382210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift */,
+				3F2437362210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		3F24373A2210CE270058F6C4 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				3F24373B2210CE3D0058F6C4 /* FavoriteCell.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		3F24F2CF21E10F60009365CB /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +248,7 @@
 				3F20EA2421C1CE6000A1A179 /* Fridge */,
 				3F2C5DB121FDFDF4006B0F28 /* SearchRecipe */,
 				3F2C5DB021FDFDD9006B0F28 /* DetailRecipe */,
+				3F2327A222109642004D884D /* Favorite */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,12 +256,9 @@
 		3F29A22021BC172D0048745D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F6422FD21B7B89F009F630C /* Reciplease.xcdatamodeld */,
-				3F2583A221DBE1F40086634F /* YummlyProtocol.swift */,
-				3F2583A421DBE3080086634F /* YummlySession.swift */,
-				3F2783DE21D2D93A00E56CC1 /* YummlyService.swift */,
-				3F2583A621DBE9B60086634F /* SearchRecipe.swift */,
-				3FB2045021F3927A0074EA03 /* RecipeInfos.swift */,
+				3F23279F22108DE3004D884D /* Recipe */,
+				3F23279E22108DC1004D884D /* WebService */,
+				3F23279D22108DB2004D884D /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +273,7 @@
 				3FB2045421F39F750074EA03 /* Fridge */,
 				3FB2045521F39F830074EA03 /* SearchRecipe */,
 				3FB2045721F39FD30074EA03 /* RecipeDetail */,
+				3F24373A2210CE270058F6C4 /* Favorite */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,13 +599,16 @@
 				3F2583A321DBE1F40086634F /* YummlyProtocol.swift in Sources */,
 				3F269EB521C5796100F49D5E /* FooterCollectionView.swift in Sources */,
 				3F29A22B21BD8A1A0048745D /* UIColor.swift in Sources */,
+				3F2437352210CB7F0058F6C4 /* FavoriteViewController.swift in Sources */,
 				3F287BA921EBBF4800081B90 /* Constants.swift in Sources */,
 				3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */,
 				3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */,
 				3F23279C22107DBE004D884D /* Integer.swift in Sources */,
+				3F2437372210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift in Sources */,
 				3F2583A521DBE3080086634F /* YummlySession.swift in Sources */,
 				3F24F2CE21E10EFF009365CB /* UITableViewCell.swift in Sources */,
 				3F2C5DB421FDFE30006B0F28 /* DetailRecipeDataSource.swift in Sources */,
+				3F2327A122109110004D884D /* Recipe.swift in Sources */,
 				3F20EA2321C1C64700A1A179 /* UIViewController.swift in Sources */,
 				3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */,
 				3F269EB921C588DC00F49D5E /* UIRoundedView.swift in Sources */,
@@ -562,6 +620,7 @@
 				3FB2045121F3927A0074EA03 /* RecipeInfos.swift in Sources */,
 				3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */,
 				3FB2045321F39DA00074EA03 /* DetailRecipeViewController.swift in Sources */,
+				3F2437392210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift in Sources */,
 				3F2C5DB921FE0648006B0F28 /* DetailRecipeDelegate.swift in Sources */,
 				3F269EBB21C59A0100F49D5E /* UIRoundedButton.swift in Sources */,
 				3F22ACDB21CFED9B00066359 /* String.swift in Sources */,
@@ -569,6 +628,7 @@
 				3F29A22421BC18490048745D /* FoodCell.swift in Sources */,
 				3F29A23321BD9AD00048745D /* UIGradientNavigationController.swift in Sources */,
 				3F20EA2121C1BB1300A1A179 /* UIView.swift in Sources */,
+				3F24373C2210CE3D0058F6C4 /* FavoriteCell.swift in Sources */,
 				3F6422F721B7B89F009F630C /* AppDelegate.swift in Sources */,
 				3F2583A721DBE9B60086634F /* SearchRecipe.swift in Sources */,
 			);

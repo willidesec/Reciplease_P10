@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeCell: UITableViewCell {
     
-    var recipe: Recipe? {
+    var recipe: Infos? {
         didSet {
             guard let imageURL = recipe?.smallImageUrls[0] else { return }
             let bigImageUrl = imageURL.dropTwoLastAndReplaceWith("500")
