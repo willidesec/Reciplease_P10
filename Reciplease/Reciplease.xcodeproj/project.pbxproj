@@ -15,6 +15,7 @@
 		3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */; };
 		3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */; };
 		3F22ACDB21CFED9B00066359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22ACDA21CFED9B00066359 /* String.swift */; };
+		3F23279C22107DBE004D884D /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23279B22107DBE004D884D /* Integer.swift */; };
 		3F24F2CC21E10D1E009365CB /* SearchRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2CB21E10D1E009365CB /* SearchRecipeTableViewController.swift */; };
 		3F24F2CE21E10EFF009365CB /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2CD21E10EFF009365CB /* UITableViewCell.swift */; };
 		3F24F2D121E10FDF009365CB /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24F2D021E10FDF009365CB /* RecipeCell.swift */; };
@@ -70,6 +71,7 @@
 		3F20EA2B21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 		3F22ACDA21CFED9B00066359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3F23279B22107DBE004D884D /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		3F24F2CB21E10D1E009365CB /* SearchRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeTableViewController.swift; sourceTree = "<group>"; };
 		3F24F2CD21E10EFF009365CB /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		3F24F2D021E10FDF009365CB /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				3F20EA2D21C421AC00A1A179 /* UICollectionViewCell.swift */,
 				3F24F2CD21E10EFF009365CB /* UITableViewCell.swift */,
 				3F22ACDA21CFED9B00066359 /* String.swift */,
+				3F23279B22107DBE004D884D /* Integer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				3F287BA921EBBF4800081B90 /* Constants.swift in Sources */,
 				3F6422FF21B7B89F009F630C /* Reciplease.xcdatamodeld in Sources */,
 				3F29A21E21BC16CA0048745D /* FridgeViewController.swift in Sources */,
+				3F23279C22107DBE004D884D /* Integer.swift in Sources */,
 				3F2583A521DBE3080086634F /* YummlySession.swift in Sources */,
 				3F24F2CE21E10EFF009365CB /* UITableViewCell.swift in Sources */,
 				3F2C5DB421FDFE30006B0F28 /* DetailRecipeDataSource.swift in Sources */,
