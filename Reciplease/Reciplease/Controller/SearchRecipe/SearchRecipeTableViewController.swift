@@ -13,6 +13,7 @@ class SearchRecipeTableViewController: UITableViewController {
     // MARK: - Properties
     var searchResult: SearchRecipe?
     let yummlyService = YummlyService()
+    let loadingScreen = LoadingScreen()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -43,13 +44,12 @@ class SearchRecipeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let loadinScreen = LoadingScreen()
-        loadinScreen.startLoading()
+        loadingScreen.startLoading()
         guard let searchResult = searchResult else { return }
         let id = searchResult.matches[indexPath.row].id
         let ingredients = searchResult.matches[indexPath.row].ingredients
         yummlyService.getRecipe(with: id, and: ingredients) { (success, recipeDetail) in
-            loadinScreen.stopLoading()
+            self.loadingScreen.stopLoading()
             if success {
                 guard let recipeDetail = recipeDetail else { return }
                 self.displayDetailRecipeViewController(with: recipeDetail)

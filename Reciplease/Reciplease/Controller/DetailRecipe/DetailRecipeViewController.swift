@@ -8,15 +8,10 @@
 
 import UIKit
 
-protocol FavoriteRecipeDelegate {
-    func saveRecipeToFavorite(recipe: RecipeDetail)
-}
-
 class DetailRecipeViewController: UIViewController {
     
     // MARK: - Properties
     var recipeDetail: RecipeDetail?
-    var favoriteRecipeDelegate: FavoriteRecipeDelegate!
     
     // MARK: - View
     let infosView = RecipeInfosView()
@@ -49,21 +44,26 @@ class DetailRecipeViewController: UIViewController {
     // MARK: - Action
     @objc func favoriteButtonDidTapped() {
         guard let recipeDetail = recipeDetail else { return }
-        favoriteRecipeDelegate.saveRecipeToFavorite(recipe: recipeDetail)
+        let favoriteRecipe = Recipe(context: AppDelegate.viewContext)
+        favoriteRecipe.name = recipeDetail.recipeInfos.name
+        try? AppDelegate.viewContext.save()
     }
     
     // MARK: - Methods
     fileprivate func setupNavigationBar() {
-        let favoriteButton: UIButton = {
-           let button = UIButton(type: .system)
-            button.setImage(UIImage(named: "heart"), for: .normal)
-            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-            button.addTarget(self, action: #selector(favoriteButtonDidTapped), for: .touchUpInside)
-            return button
-        }()
+//        let favoriteButton: UIButton = {
+//           let button = UIButton(type: .system)
+//            button.setImage(UIImage(named: "heart"), for: .normal)
+//            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+//            button.addTarget(self, action: #selector(favoriteButtonDidTapped), for: .touchUpInside)
+//            return button
+//        }()
+//        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favoriteButton)
+//        favoriteButton.squareRatio()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favoriteButton)
-        favoriteButton.squareRatio()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
+        
     }
     
     fileprivate func setupUI() {

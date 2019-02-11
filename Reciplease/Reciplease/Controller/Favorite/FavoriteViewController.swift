@@ -29,7 +29,6 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setConstraints()
-        detailRecipeVC.favoriteRecipeDelegate = self
     }
     
     // MARK: - Methods
@@ -40,15 +39,3 @@ class FavoriteViewController: UIViewController {
 
 }
 
-extension FavoriteViewController: FavoriteRecipeDelegate {
-    
-    func saveRecipeToFavorite(recipe: RecipeDetail) {
-        let favoriteRecipe = Recipe(context: AppDelegate.viewContext)
-        favoriteRecipe.name = recipe.recipeInfos.name
-        try? AppDelegate.viewContext.save()
-        favoriteRecipes = Recipe.fetchAll()
-        favoriteTableView.reloadData()
-    }
-    
-    
-}
