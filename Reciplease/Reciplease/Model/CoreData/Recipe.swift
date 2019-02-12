@@ -22,3 +22,11 @@ class Recipe: NSManagedObject {
         try? viewContext.save()
     }
 }
+
+class Ingredient: NSManagedObject {
+    
+}
+
+class Instruction: NSManagedObject {
+    
+}

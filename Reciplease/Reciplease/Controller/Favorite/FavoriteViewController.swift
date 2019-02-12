@@ -13,7 +13,6 @@ class FavoriteViewController: UIViewController {
     // MARK: - Properties
     let detailRecipeVC = DetailRecipeViewController()
     var favoriteRecipes = Recipe.fetchAll()
-    let array = [1, 2]
 
     // MARK: - Views
     lazy var favoriteTableView: UITableView = {
@@ -29,6 +28,12 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        favoriteRecipes = Recipe.fetchAll()
+        favoriteTableView.reloadData()
     }
     
     // MARK: - Methods

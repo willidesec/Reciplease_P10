@@ -13,6 +13,7 @@ class FavoriteCell: RecipeCell {
     var favoriteRecipe: Recipe? {
         didSet {
             nameLabel.text = favoriteRecipe?.name
+            
         }
     }
 }

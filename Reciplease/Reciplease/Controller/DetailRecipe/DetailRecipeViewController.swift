@@ -51,19 +51,7 @@ class DetailRecipeViewController: UIViewController {
     
     // MARK: - Methods
     fileprivate func setupNavigationBar() {
-//        let favoriteButton: UIButton = {
-//           let button = UIButton(type: .system)
-//            button.setImage(UIImage(named: "heart"), for: .normal)
-//            button.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-//            button.addTarget(self, action: #selector(favoriteButtonDidTapped), for: .touchUpInside)
-//            return button
-//        }()
-//        
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favoriteButton)
-//        favoriteButton.squareRatio()
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
-        
     }
     
     fileprivate func setupUI() {
