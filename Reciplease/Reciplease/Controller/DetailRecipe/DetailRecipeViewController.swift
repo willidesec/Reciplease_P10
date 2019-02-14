@@ -12,6 +12,7 @@ class DetailRecipeViewController: UIViewController {
     
     // MARK: - Properties
     var recipeDetail: RecipeDetail?
+    var isFavoriteRecipe = false
     
     // MARK: - View
     let infosView = RecipeInfosView()
@@ -43,22 +44,41 @@ class DetailRecipeViewController: UIViewController {
     
     // MARK: - Action
     @objc func favoriteButtonDidTapped() {
+        !isFavoriteRecipe ? saveRecipeToFavorite() : unsaveRecipeToFavorite()
+    }
+    
+    // MARK: - Methods
+    private func configureTableView() {
+        ingredientTableView.dataSource = self
+        ingredientTableView.delegate = self
+        ingredientTableView.register(IngredientCell.self, forCellReuseIdentifier: IngredientCell.identifier)
+        ingredientTableView.separatorStyle = .none
+    }
+    
+    private func saveRecipeToFavorite() {
         guard let recipeDetail = recipeDetail else { return }
         let favoriteRecipe = Recipe(context: AppDelegate.viewContext)
         favoriteRecipe.name = recipeDetail.recipeInfos.name
         try? AppDelegate.viewContext.save()
+        isFavoriteRecipe = true
+        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillHeart")
     }
     
-    // MARK: - Methods
-    fileprivate func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
+    private func unsaveRecipeToFavorite() {
+        Recipe.deleteAll()
+        isFavoriteRecipe = false
+        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "heart")
     }
     
-    fileprivate func setupUI() {
+}
+
+// MARK: - Setup UI
+extension DetailRecipeViewController {
+    private func setupUI() {
         
         view.backgroundColor = UIColor.white
         
-        [recipeImageView, infosView, ingredientTableView].forEach() { view.addSubview($0) }        
+        [recipeImageView, infosView, ingredientTableView].forEach() { view.addSubview($0) }
         
         setConstraints()
         
@@ -81,7 +101,11 @@ class DetailRecipeViewController: UIViewController {
         
     }
     
-    fileprivate func setConstraints() {
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
+    }
+    
+    private func setConstraints() {
         let imageViewHeight = view.frame.height / 4
         recipeImageView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, size: CGSize(width: 0, height: imageViewHeight))
         
@@ -93,14 +117,4 @@ class DetailRecipeViewController: UIViewController {
         
         ingredientTableView.setAnchors(top: infosView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeBottomAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15))
     }
-    
-    fileprivate func configureTableView() {
-        ingredientTableView.dataSource = self
-        ingredientTableView.delegate = self
-        ingredientTableView.register(IngredientCell.self, forCellReuseIdentifier: IngredientCell.identifier)
-        ingredientTableView.separatorStyle = .none
-    }
-    
-    
-
 }
