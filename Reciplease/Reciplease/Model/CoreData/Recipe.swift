@@ -21,6 +21,23 @@ class Recipe: NSManagedObject {
         Recipe.fetchAll(viewContext: viewContext).forEach({ viewContext.delete($0) })
         try? viewContext.save()
     }
+    
+    static func checkIfEntityExist(recipeName: String) -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipe")
+        let predicate = NSPredicate(format: "name == %@", recipeName)
+        request.predicate = predicate
+        
+        // Safety enought ??
+//        let count = try? AppDelegate.viewContext.count(for: request)
+        guard let count = try? AppDelegate.viewContext.count(for: request) else { return false }
+        
+        if count == 0 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
 }
 
 class Ingredient: NSManagedObject {

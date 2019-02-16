@@ -39,7 +39,11 @@ class DetailRecipeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
-        setupNavigationBar()
+        
+        guard let recipeName = recipeDetail?.recipeInfos.name else { return }
+        isFavoriteRecipe = Recipe.checkIfEntityExist(recipeName: recipeName)
+        isFavoriteRecipe ? setupNavigationBar(image: #imageLiteral(resourceName: "fillHeart")) : setupNavigationBar(image: #imageLiteral(resourceName: "heart"))
+        
     }
     
     // MARK: - Action
@@ -101,8 +105,8 @@ extension DetailRecipeViewController {
         
     }
     
-    private func setupNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
+    private func setupNavigationBar(image: UIImage) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
     }
     
     private func setConstraints() {
