@@ -39,11 +39,7 @@ class DetailRecipeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
-        
-        guard let recipeName = recipeDetail?.recipeInfos.name else { return }
-        isFavoriteRecipe = Recipe.checkIfEntityExist(recipeName: recipeName)
-        isFavoriteRecipe ? setupNavigationBar(image: #imageLiteral(resourceName: "fillHeart")) : setupNavigationBar(image: #imageLiteral(resourceName: "heart"))
-        
+        checkIfFavoriteRecipe()
     }
     
     // MARK: - Action
@@ -59,6 +55,12 @@ class DetailRecipeViewController: UIViewController {
         ingredientTableView.separatorStyle = .none
     }
     
+    private func checkIfFavoriteRecipe() {
+        guard let recipeName = recipeDetail?.recipeInfos.name else { return }
+        isFavoriteRecipe = Recipe.checkIfEntityExist(recipeName: recipeName)
+        isFavoriteRecipe ? setupNavigationBar(image: #imageLiteral(resourceName: "fillHeart")) : setupNavigationBar(image: #imageLiteral(resourceName: "heart"))
+    }
+    
     private func saveRecipeToFavorite() {
         guard let recipeDetail = recipeDetail else { return }
         let favoriteRecipe = Recipe(context: AppDelegate.viewContext)
@@ -69,7 +71,8 @@ class DetailRecipeViewController: UIViewController {
     }
     
     private func unsaveRecipeToFavorite() {
-        Recipe.deleteAll()
+        guard let recipeName = recipeDetail?.recipeInfos.name else { return }
+        Recipe.deleteRecipe(recipeName: recipeName)
         isFavoriteRecipe = false
         navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "heart")
     }

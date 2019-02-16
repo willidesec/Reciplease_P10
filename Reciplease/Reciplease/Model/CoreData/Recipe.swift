@@ -22,8 +22,19 @@ class Recipe: NSManagedObject {
         try? viewContext.save()
     }
     
+    static func deleteRecipe(recipeName: String) {
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        let predicate = NSPredicate(format: "name == %@", recipeName)
+        request.predicate = predicate
+        if let objects = try? AppDelegate.viewContext.fetch(request) {
+            objects.forEach() { AppDelegate.viewContext.delete($0) }
+        }
+        
+    }
+    
+    // TODO: add parameter context to test methods
     static func checkIfEntityExist(recipeName: String) -> Bool {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipe")
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
         
