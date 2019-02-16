@@ -216,23 +216,6 @@
 			path = Favorite;
 			sourceTree = "<group>";
 		};
-		3F24F2CF21E10F60009365CB /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				3F24F2D021E10FDF009365CB /* RecipeCell.swift */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		3F269EB621C588A200F49D5E /* CollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				3F29A22321BC18490048745D /* FoodCell.swift */,
-				3F269EB421C5796100F49D5E /* FooterCollectionView.swift */,
-			);
-			path = CollectionViewCell;
-			sourceTree = "<group>";
-		};
 		3F269EB721C588B200F49D5E /* Custom Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +367,8 @@
 		3FB2045421F39F750074EA03 /* Fridge */ = {
 			isa = PBXGroup;
 			children = (
-				3F269EB621C588A200F49D5E /* CollectionViewCell */,
+				3F29A22321BC18490048745D /* FoodCell.swift */,
+				3F269EB421C5796100F49D5E /* FooterCollectionView.swift */,
 			);
 			path = Fridge;
 			sourceTree = "<group>";
@@ -392,7 +376,7 @@
 		3FB2045521F39F830074EA03 /* SearchRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				3F24F2CF21E10F60009365CB /* TableViewCell */,
+				3F24F2D021E10FDF009365CB /* RecipeCell.swift */,
 			);
 			path = SearchRecipe;
 			sourceTree = "<group>";

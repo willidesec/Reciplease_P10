@@ -12,10 +12,7 @@ class RecipeCell: UITableViewCell {
     
     var recipe: Infos? {
         didSet {
-            guard let imageURL = recipe?.smallImageUrls[0] else { return }
-            let bigImageUrl = imageURL.dropTwoLastAndReplaceWith("500")
-            guard let url = URL(string: bigImageUrl) else { return }
-            guard let data = try? Data(contentsOf: url) else { return }
+            guard let data = recipe?.smallImageUrls[0].dropTwoLastAndReplaceWith("500").transformImageUrlToData() else { return }
             recipeImage.image = UIImage(data: data)
             nameLabel.text = recipe?.recipeName
             guard var timeInSeconds = recipe?.totalTimeInSeconds else { return }
@@ -27,7 +24,6 @@ class RecipeCell: UITableViewCell {
             // TODO: Majuscule sur les noms d'ingrédients
             let ingredientsText = allIngredients.joined(separator: ", ")
             ingredientLabel.text = ingredientsText
-            
         }
     }
     

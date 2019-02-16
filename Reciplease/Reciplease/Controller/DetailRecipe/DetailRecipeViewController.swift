@@ -20,13 +20,7 @@ class DetailRecipeViewController: UIViewController {
     
     lazy var recipeImageView: UIImageView = {
         let imageView = UIImageView()
-        guard let imageUrl = recipeDetail?.recipeInfos.images[0].hostedLargeUrl else {
-            return UIImageView()
-        }
-        guard let url = URL(string: imageUrl) else {
-            return UIImageView()
-        }
-        guard let data = try? Data(contentsOf: url) else {
+        guard let data = recipeDetail?.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData() else {
             return UIImageView()
         }
         imageView.image = UIImage(data: data)
@@ -58,23 +52,25 @@ class DetailRecipeViewController: UIViewController {
     private func checkIfFavoriteRecipe() {
         guard let recipeName = recipeDetail?.recipeInfos.name else { return }
         isFavoriteRecipe = Recipe.checkIfEntityExist(recipeName: recipeName)
-        isFavoriteRecipe ? setupNavigationBar(image: #imageLiteral(resourceName: "fillHeart")) : setupNavigationBar(image: #imageLiteral(resourceName: "heart"))
+        isFavoriteRecipe ? setupNavigationBar(image: #imageLiteral(resourceName: "fillFavoriteButton")) : setupNavigationBar(image: #imageLiteral(resourceName: "favoriteButton"))
     }
     
     private func saveRecipeToFavorite() {
         guard let recipeDetail = recipeDetail else { return }
         let favoriteRecipe = Recipe(context: AppDelegate.viewContext)
         favoriteRecipe.name = recipeDetail.recipeInfos.name
+        favoriteRecipe.duration = recipeDetail.recipeInfos.totalTime
+        favoriteRecipe.rating = String(recipeDetail.recipeInfos.rating)
         try? AppDelegate.viewContext.save()
         isFavoriteRecipe = true
-        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillHeart")
+        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillFavoriteButton")
     }
     
     private func unsaveRecipeToFavorite() {
         guard let recipeName = recipeDetail?.recipeInfos.name else { return }
         Recipe.deleteRecipe(recipeName: recipeName)
         isFavoriteRecipe = false
-        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "heart")
+        navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "favoriteButton")
     }
     
 }
