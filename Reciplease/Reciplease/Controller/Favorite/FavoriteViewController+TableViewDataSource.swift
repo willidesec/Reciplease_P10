@@ -21,5 +21,15 @@ extension FavoriteViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favoriteRecipe = favoriteRecipes[indexPath.row]
+        displayDetailFavoriteViewController(recipe: favoriteRecipe)
+    }
+    
+    private func displayDetailFavoriteViewController(recipe: Recipe) {
+        let detailFavoriteVC = DetailFavoriteViewController(recipe: recipe)
+        navigationController?.pushViewController(detailFavoriteVC, animated: true)
+    }
+    
     
 }

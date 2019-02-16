@@ -40,13 +40,6 @@ class DetailRecipeViewController: UIViewController {
     }
     
     // MARK: - Methods
-    private func configureTableView() {
-        ingredientTableView.dataSource = self
-        ingredientTableView.delegate = self
-        ingredientTableView.register(IngredientCell.self, forCellReuseIdentifier: IngredientCell.identifier)
-        ingredientTableView.separatorStyle = .none
-    }
-    
     private func checkIfFavoriteRecipe() {
         guard let recipeName = recipeDetail?.recipeInfos.name else { return }
         isFavoriteRecipe = Recipe.checkIfEntityExist(recipeName: recipeName)
@@ -60,6 +53,8 @@ class DetailRecipeViewController: UIViewController {
         favoriteRecipe.duration = recipeDetail.recipeInfos.totalTime
         favoriteRecipe.rating = String(recipeDetail.recipeInfos.rating)
         favoriteRecipe.image = recipeDetail.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData()
+        favoriteRecipe.calories = String(recipeDetail.recipeInfos.nutritionEstimates[0].value)
+        favoriteRecipe.servings = String(recipeDetail.recipeInfos.numberOfServings)
         try? AppDelegate.viewContext.save()
         isFavoriteRecipe = true
         navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillFavoriteButton")
@@ -76,6 +71,13 @@ class DetailRecipeViewController: UIViewController {
 
 // MARK: - Setup UI
 extension DetailRecipeViewController {
+    private func configureTableView() {
+        ingredientTableView.dataSource = self
+        ingredientTableView.delegate = self
+        ingredientTableView.register(IngredientCell.self, forCellReuseIdentifier: IngredientCell.identifier)
+        ingredientTableView.separatorStyle = .none
+    }
+    
     private func setupUI() {
         
         view.backgroundColor = UIColor.white
@@ -100,7 +102,6 @@ extension DetailRecipeViewController {
             let calories = recipeDetail.recipeInfos.nutritionEstimates[0].value
             infosView.detailView.energeticValueLabel.text = "\(String(calories)) kcal"
         }
-        
     }
     
     private func setupNavigationBar(image: UIImage) {

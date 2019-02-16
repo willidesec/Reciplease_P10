@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E57640399AEE8FC90EB3A03 /* Pods_RecipleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE8E3168BD5CAC5A103918C /* Pods_RecipleaseTests.framework */; };
+		3F1FCE6B221865FD00008F29 /* DetailFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FCE6A221865FD00008F29 /* DetailFavoriteViewController.swift */; };
+		3F1FCE6D22186CBD00008F29 /* DetailFavoriteViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FCE6C22186CBD00008F29 /* DetailFavoriteViewController+UITableViewDataSource.swift */; };
+		3F1FCE6F22186D3E00008F29 /* DetailFavoriteViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FCE6E22186D3E00008F29 /* DetailFavoriteViewController+UITableViewDelegate.swift */; };
 		3F20EA2121C1BB1300A1A179 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2021C1BB1300A1A179 /* UIView.swift */; };
 		3F20EA2321C1C64700A1A179 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2221C1C64700A1A179 /* UIViewController.swift */; };
 		3F20EA2621C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20EA2521C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift */; };
@@ -69,6 +72,9 @@
 		1BE51026ECA77D5C260B1DA4 /* Pods-Reciplease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reciplease/Pods-Reciplease.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5B039F5D13055B65638DE9 /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F722B5942C216F673A882A2 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
+		3F1FCE6A221865FD00008F29 /* DetailFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavoriteViewController.swift; sourceTree = "<group>"; };
+		3F1FCE6C22186CBD00008F29 /* DetailFavoriteViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailFavoriteViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		3F1FCE6E22186D3E00008F29 /* DetailFavoriteViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailFavoriteViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		3F20EA2021C1BB1300A1A179 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3F20EA2221C1C64700A1A179 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3F20EA2521C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeViewController+CollectionViewDataSource.swift"; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 				3F2437342210CB7F0058F6C4 /* FavoriteViewController.swift */,
 				3F2437382210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift */,
 				3F2437362210CC820058F6C4 /* FavoriteViewController+TableViewDelegate.swift */,
+				3F1FCE6A221865FD00008F29 /* DetailFavoriteViewController.swift */,
+				3F1FCE6C22186CBD00008F29 /* DetailFavoriteViewController+UITableViewDataSource.swift */,
+				3F1FCE6E22186D3E00008F29 /* DetailFavoriteViewController+UITableViewDelegate.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -580,6 +589,7 @@
 				3F29A22721BD84050048745D /* CAGradientLayer.swift in Sources */,
 				3F24F2CC21E10D1E009365CB /* SearchRecipeTableViewController.swift in Sources */,
 				3F20EA2621C1CE9D00A1A179 /* FridgeViewController+CollectionViewDataSource.swift in Sources */,
+				3F1FCE6F22186D3E00008F29 /* DetailFavoriteViewController+UITableViewDelegate.swift in Sources */,
 				3F2583A321DBE1F40086634F /* YummlyProtocol.swift in Sources */,
 				3F269EB521C5796100F49D5E /* FooterCollectionView.swift in Sources */,
 				3F29A22B21BD8A1A0048745D /* UIColor.swift in Sources */,
@@ -597,11 +607,13 @@
 				3F20EA2821C1CF1200A1A179 /* FridgeViewController+CollectionViewDelegateFlowLayout.swift in Sources */,
 				3F269EB921C588DC00F49D5E /* UIRoundedView.swift in Sources */,
 				3F2C5DB721FE0327006B0F28 /* IngredientCell.swift in Sources */,
+				3F1FCE6B221865FD00008F29 /* DetailFavoriteViewController.swift in Sources */,
 				3F2630A621F5004300C0B5A4 /* DetailView.swift in Sources */,
 				3F287BAB21EBC4B900081B90 /* LoadingScreen.swift in Sources */,
 				3F2783DF21D2D93A00E56CC1 /* YummlyService.swift in Sources */,
 				3F20EA2C21C1D97500A1A179 /* FridgeViewController+TextFieldDelegate.swift in Sources */,
 				3FB2045121F3927A0074EA03 /* RecipeInfos.swift in Sources */,
+				3F1FCE6D22186CBD00008F29 /* DetailFavoriteViewController+UITableViewDataSource.swift in Sources */,
 				3F20EA2E21C421AC00A1A179 /* UICollectionViewCell.swift in Sources */,
 				3FB2045321F39DA00074EA03 /* DetailRecipeViewController.swift in Sources */,
 				3F2437392210CCAC0058F6C4 /* FavoriteViewController+TableViewDataSource.swift in Sources */,
