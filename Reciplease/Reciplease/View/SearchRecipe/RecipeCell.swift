@@ -21,8 +21,7 @@ class RecipeCell: UITableViewCell {
             guard let rating = recipe?.rating else { return }
             ratingLabel.text = String(rating)
             guard let allIngredients = recipe?.ingredients else { return }
-            // TODO: Majuscule sur les noms d'ingrédients
-            let ingredientsText = allIngredients.joined(separator: ", ")
+            let ingredientsText = allIngredients.joined(separator: ", ").localizedCapitalized
             ingredientLabel.text = ingredientsText
         }
     }
