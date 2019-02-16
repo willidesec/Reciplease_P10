@@ -20,9 +20,7 @@ class DetailRecipeViewController: UIViewController {
     
     lazy var recipeImageView: UIImageView = {
         let imageView = UIImageView()
-        guard let data = recipeDetail?.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData() else {
-            return UIImageView()
-        }
+        guard let data = recipeDetail?.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData() else { return UIImageView() }
         imageView.image = UIImage(data: data)
         imageView.contentMode = .scaleToFill
         return imageView
@@ -61,6 +59,7 @@ class DetailRecipeViewController: UIViewController {
         favoriteRecipe.name = recipeDetail.recipeInfos.name
         favoriteRecipe.duration = recipeDetail.recipeInfos.totalTime
         favoriteRecipe.rating = String(recipeDetail.recipeInfos.rating)
+        favoriteRecipe.image = recipeDetail.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData()
         try? AppDelegate.viewContext.save()
         isFavoriteRecipe = true
         navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillFavoriteButton")
