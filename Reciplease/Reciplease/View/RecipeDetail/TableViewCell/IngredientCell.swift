@@ -13,13 +13,14 @@ class IngredientCell: UITableViewCell {
     let bulletedLabel: UILabel = {
         let label = UILabel()
         label.text = "●"
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = UIColor.pinkThemeColor
         return label
     }()
     
     let ingredientLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
         label.numberOfLines = 0
         return label
     }()

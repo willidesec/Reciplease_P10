@@ -25,6 +25,16 @@ class DetailRecipeViewController: UIViewController {
         imageView.contentMode = .scaleToFill
         return imageView
     }()
+    
+    let safariButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor.redThemeColor
+        button.setTitle(Constants.SAFARI_BUTTON_TITLE, for: .normal)
+        button.titleLabel?.textColor = .white
+        button.addCornerRadius(of: 5)
+        button.addTarget(self, action: #selector(safariButtonDidTapped), for: .touchUpInside)
+        return button
+    }()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -37,6 +47,11 @@ class DetailRecipeViewController: UIViewController {
     // MARK: - Action
     @objc func favoriteButtonDidTapped() {
         !isFavoriteRecipe ? saveRecipeToFavorite() : unsaveRecipeToFavorite()
+    }
+    
+    @objc func safariButtonDidTapped() {
+        guard let url = URL(string: "https://stackoverflow.com") else { return }
+        UIApplication.shared.open(url)
     }
     
     // MARK: - Methods
@@ -82,7 +97,7 @@ extension DetailRecipeViewController {
         
         view.backgroundColor = UIColor.white
         
-        [recipeImageView, infosView, ingredientTableView].forEach() { view.addSubview($0) }
+        [recipeImageView, infosView, ingredientTableView, safariButton].forEach() { view.addSubview($0) }
         
         setConstraints()
         
@@ -118,6 +133,8 @@ extension DetailRecipeViewController {
         
         infosView.detailView.setAnchors(top: infosView.nameLabel.bottomAnchor, leading: infosView.leadingAnchor, bottom: infosView.bottomAnchor, trailing: infosView.trailingAnchor, padding: UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20))
         
-        ingredientTableView.setAnchors(top: infosView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeBottomAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15))
+        ingredientTableView.setAnchors(top: infosView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeBottomAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 10, left: 15, bottom: 50, right: 15))
+        
+        safariButton.setAnchors(top: ingredientTableView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeBottomAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 5, left: 75, bottom: 10, right: 75))
     }
 }
