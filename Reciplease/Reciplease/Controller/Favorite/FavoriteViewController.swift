@@ -24,10 +24,18 @@ class FavoriteViewController: UIViewController {
         return tableView
     }()
     
+    lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        return searchController
+    }()
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setConstraints()
+        setBehaviors()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,8 +47,18 @@ class FavoriteViewController: UIViewController {
     // MARK: - Methods
     private func setConstraints() {
         view.addSubview(favoriteTableView)
-        favoriteTableView.setAnchors(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        favoriteTableView.setAnchors(top: view.safeTopAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+    }
+    
+    private func setBehaviors() {
+        navigationItem.searchController = searchController
     }
 
+}
+
+extension FavoriteViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("yes")
+    }
 }
 

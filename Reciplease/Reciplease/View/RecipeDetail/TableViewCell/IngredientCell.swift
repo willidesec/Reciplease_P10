@@ -9,7 +9,7 @@
 import UIKit
 
 class IngredientCell: UITableViewCell {
-    
+        
     let bulletedLabel: UILabel = {
         let label = UILabel()
         label.text = "●"

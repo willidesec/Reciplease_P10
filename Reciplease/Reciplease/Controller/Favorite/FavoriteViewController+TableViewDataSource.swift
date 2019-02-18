@@ -17,6 +17,13 @@ extension FavoriteViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.identifier, for: indexPath) as! FavoriteCell
         
         cell.favoriteRecipe = favoriteRecipes[indexPath.row]
+        guard let ingredients = favoriteRecipes[indexPath.row].ingredients?.allObjects as? [Ingredient] else { return UITableViewCell() }
+        var ingredientsText = ""
+        for ingredient in ingredients {
+            guard let name = ingredient.name else { return UITableViewCell() }
+            ingredientsText += "\(name.localizedCapitalized), "
+        }
+        cell.ingredientLabel.text = ingredientsText
         
         return cell
     }

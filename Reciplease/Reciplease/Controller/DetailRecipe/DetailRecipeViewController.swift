@@ -70,6 +70,20 @@ class DetailRecipeViewController: UIViewController {
         favoriteRecipe.image = recipeDetail.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData()
         favoriteRecipe.calories = String(recipeDetail.recipeInfos.nutritionEstimates[0].value)
         favoriteRecipe.servings = String(recipeDetail.recipeInfos.numberOfServings)
+
+        
+        for ingredient in recipeDetail.ingredients {
+            let ingrendientEntity = Ingredient(context: AppDelegate.viewContext)
+            ingrendientEntity.name = ingredient
+            ingrendientEntity.recipe = favoriteRecipe
+        }
+        
+        for instruction in recipeDetail.recipeInfos.ingredientLines {
+            let instructionEntity = Instruction(context: AppDelegate.viewContext)
+            instructionEntity.name = instruction
+            instructionEntity.recipe = favoriteRecipe
+        }
+        
         try? AppDelegate.viewContext.save()
         isFavoriteRecipe = true
         navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "fillFavoriteButton")
