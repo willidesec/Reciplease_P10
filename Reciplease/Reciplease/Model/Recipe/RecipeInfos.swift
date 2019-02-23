@@ -21,6 +21,7 @@ struct RecipeInfos: Decodable {
     let rating: Int
     let numberOfServings: Int
     let nutritionEstimates: [NutritionEstimates]
+    let source: Source
 }
 
 struct Image: Decodable {
@@ -29,4 +30,8 @@ struct Image: Decodable {
 
 struct NutritionEstimates: Decodable {
     let value: Float
+}
+
+struct Source: Decodable {
+    let sourceRecipeUrl: String
 }

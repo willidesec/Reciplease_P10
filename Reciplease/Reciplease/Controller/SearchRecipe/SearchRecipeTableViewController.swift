@@ -18,12 +18,27 @@ class SearchRecipeTableViewController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBar()
+        configureTableView()
+    }
+    
+    // MARK: - Methods
+    private func displayDetailRecipeViewController(with passingObject: RecipeDetail) {
+        let detailRecipeVC = DetailRecipeViewController()
+        detailRecipeVC.recipeDetail = passingObject
+        navigationController?.pushViewController(detailRecipeVC, animated: true)
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = Constants.NavigationTitle.RECIPES
+    }
+    
+    private func configureTableView() {
         tableView.register(RecipeCell.self, forCellReuseIdentifier: RecipeCell.identifier)
         tableView.tableFooterView = UIView()
-        
-
-
     }
+    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,12 +78,4 @@ class SearchRecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
-    
-    // MARK: - Methods
-    private func displayDetailRecipeViewController(with passingObject: RecipeDetail) {
-        let detailRecipeVC = DetailRecipeViewController()
-        detailRecipeVC.recipeDetail = passingObject
-        navigationController?.pushViewController(detailRecipeVC, animated: true)
-    }
-
 }

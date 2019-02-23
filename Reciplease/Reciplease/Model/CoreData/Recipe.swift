@@ -12,7 +12,6 @@ import CoreData
 class Recipe: NSManagedObject {
     static func fetchAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [Recipe] {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
-//        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         guard let favoriteRecipe = try? viewContext.fetch(request) else { return [] }
         return favoriteRecipe
     }

@@ -15,12 +15,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="servings" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient" syncable="YES"/>
         <relationship name="instructions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instruction" inverseName="recipe" inverseEntity="Instruction" syncable="YES"/>
     </entity>
     <elements>
         <element name="Ingredient" positionX="164.07421875" positionY="102.8515625" width="128" height="73"/>
         <element name="Instruction" positionX="112.0390625" positionY="-132.85546875" width="128" height="73"/>
-        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="180"/>
     </elements>
 </model>

@@ -50,7 +50,10 @@ class DetailRecipeViewController: UIViewController {
     }
     
     @objc func safariButtonDidTapped() {
-        guard let url = URL(string: "https://stackoverflow.com") else { return }
+        guard let source = recipeDetail?.recipeInfos.source.sourceRecipeUrl, let url = URL(string: source) else {
+            print("error")
+            return
+        }
         UIApplication.shared.open(url)
     }
     
@@ -70,6 +73,7 @@ class DetailRecipeViewController: UIViewController {
         favoriteRecipe.image = recipeDetail.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData()
         favoriteRecipe.calories = String(recipeDetail.recipeInfos.nutritionEstimates[0].value)
         favoriteRecipe.servings = String(recipeDetail.recipeInfos.numberOfServings)
+        favoriteRecipe.source = recipeDetail.recipeInfos.source.sourceRecipeUrl
 
         
         for ingredient in recipeDetail.ingredients {
@@ -117,7 +121,7 @@ extension DetailRecipeViewController {
         
         infosView.backgroundColor = .white
         infosView.addCornerRadius(of: 25)
-        infosView.addShadow(width: 3, height: 3, radius: 10, opacity: 0.2)
+        infosView.addShadow(width: 3, height: 3, radius: 5, opacity: 0.2)
         
         guard let recipeDetail = recipeDetail else { return }
         infosView.nameLabel.text = recipeDetail.recipeInfos.name
@@ -134,6 +138,7 @@ extension DetailRecipeViewController {
     }
     
     private func setupNavigationBar(image: UIImage) {
+        navigationItem.title = Constants.NavigationTitle.DETAILS
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(favoriteButtonDidTapped))
     }
     
