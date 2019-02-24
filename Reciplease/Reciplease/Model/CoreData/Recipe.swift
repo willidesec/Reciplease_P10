@@ -21,14 +21,14 @@ class Recipe: NSManagedObject {
         try? viewContext.save()
     }
     
-    static func deleteRecipe(recipeName: String) {
+    static func deleteRecipe(viewContext: NSManagedObjectContext = AppDelegate.viewContext, recipeName: String) {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
         if let objects = try? AppDelegate.viewContext.fetch(request) {
             objects.forEach() { AppDelegate.viewContext.delete($0) }
         }
-        
+        try? viewContext.save()
     }
     
     // TODO: add parameter context to test methods

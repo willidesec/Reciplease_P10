@@ -44,6 +44,12 @@ class DetailRecipeViewController: UIViewController {
         checkIfFavoriteRecipe()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkIfFavoriteRecipe()
+    }
+    
     // MARK: - Action
     @objc func favoriteButtonDidTapped() {
         !isFavoriteRecipe ? saveRecipeToFavorite() : unsaveRecipeToFavorite()

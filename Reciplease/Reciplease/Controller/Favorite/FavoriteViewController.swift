@@ -27,7 +27,6 @@ class FavoriteViewController: UIViewController {
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
-        
         return searchController
     }()
     
@@ -41,6 +40,7 @@ class FavoriteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         favoriteRecipes = Recipe.fetchAll()
         favoriteTableView.reloadData()
     }
