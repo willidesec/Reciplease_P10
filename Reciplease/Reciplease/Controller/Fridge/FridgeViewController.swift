@@ -38,12 +38,10 @@ class FridgeViewController: UIViewController {
     }
     
     @IBAction func searchButtonDidTapped(_ sender: UIButton) {
-        // Methode assez sécurisé ? Que se passe t'il si l'appel success mais que l'object est vide ?
-        // S'assurer que l'on ouvre pas le nouveau controller si l'objet est vide
-        let activityIndicatorView = ActivityIndicatorView()
-        toggleActivityIndicator(with: activityIndicatorView, shown: true)
+        let loadingScreen = LoadingScreen()
+        loadingScreen.startLoading()
         yummlyService.searchRecipe(for: fridge) { (success, searchResult) in
-            self.toggleActivityIndicator(with: activityIndicatorView, shown: false)
+            loadingScreen.stopLoading()
             if success {
                 guard let searchResult = searchResult else { return }
                 self.displaySearchResultTableViewController(with: searchResult)
@@ -72,8 +70,8 @@ class FridgeViewController: UIViewController {
         fridge = []
     }
     
-    private func displaySearchResultTableViewController(with passingObject: SearchResult) {
-        let searchResultVC = SearchResultTableViewController()
+    private func displaySearchResultTableViewController(with passingObject: SearchRecipe) {
+        let searchResultVC = SearchRecipeTableViewController()
         searchResultVC.searchResult = passingObject
         navigationController?.pushViewController(searchResultVC, animated: true)
     }

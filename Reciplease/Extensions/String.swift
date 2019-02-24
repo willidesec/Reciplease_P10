@@ -18,4 +18,10 @@ extension String {
     func dropTwoLastAndReplaceWith(_ characters: String) -> String {
         return self.dropLast(2) + characters
     }
+    
+    func transformImageUrlToData() -> Data {
+        guard let url = URL(string: self) else { return Data() }
+        guard let data = try? Data(contentsOf: url) else { return Data() }
+        return data
+    }
 }
