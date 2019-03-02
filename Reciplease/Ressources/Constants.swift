@@ -29,4 +29,15 @@ struct Constants {
                              """
     }
     
+    struct Alert {
+        static let OUPS_TITLE = "Oups"
+        static let EMPTY_FRIDGE_MESSAGE = "Your fridge is empty\n Add some food 🍅"
+        static let NO_RECIPE_MESSAGE = "No recipes with your ingredients 🙅🏻‍♂️"
+        static let NOTHING_TO_CLEAR = "Nothing to clear 🤷🏻‍♂️"
+        static let WRITE_INGREDIENT = "Write some ingredients"
+        static let ERROR_TITLE = "Error"
+        static let ERROR_MESSAGE = "Check your network connexion 👨🏻‍💻"
+        static let CLOSE = "Close"
+    }
+    
 }

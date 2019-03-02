@@ -10,6 +10,7 @@ import UIKit
 
 extension DetailRecipeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        let MAX_HEIGHT: CGFloat = 40.0
+        return MAX_HEIGHT
     }
 }
