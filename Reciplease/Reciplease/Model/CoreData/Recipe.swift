@@ -32,7 +32,7 @@ class Recipe: NSManagedObject {
     }
     
     // TODO: add parameter context to test methods
-    static func checkIfEntityExist(recipeName: String) -> Bool {
+    static func checkIfEntityExist(viewContext: NSManagedObjectContext = AppDelegate.viewContext, recipeName: String) -> Bool {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
