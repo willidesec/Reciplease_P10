@@ -24,6 +24,7 @@
 		3F2111172222E674003CC107 /* YummlyServiceSearchRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2111162222E674003CC107 /* YummlyServiceSearchRecipeTests.swift */; };
 		3F2111192222F31D003CC107 /* YummlyServiceGetRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2111182222F31D003CC107 /* YummlyServiceGetRecipeTests.swift */; };
 		3F21111B2222F4F6003CC107 /* GetRecipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F21111A2222F4F6003CC107 /* GetRecipe.json */; };
+		3F2233FB222BFFAE007E2DB2 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2233FA222BFFAE007E2DB2 /* PermanentMarker-Regular.ttf */; };
 		3F22ACDB21CFED9B00066359 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22ACDA21CFED9B00066359 /* String.swift */; };
 		3F23279C22107DBE004D884D /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23279B22107DBE004D884D /* Integer.swift */; };
 		3F2327A122109110004D884D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2327A022109110004D884D /* Recipe.swift */; };
@@ -95,6 +96,7 @@
 		3F2111162222E674003CC107 /* YummlyServiceSearchRecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummlyServiceSearchRecipeTests.swift; sourceTree = "<group>"; };
 		3F2111182222F31D003CC107 /* YummlyServiceGetRecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummlyServiceGetRecipeTests.swift; sourceTree = "<group>"; };
 		3F21111A2222F4F6003CC107 /* GetRecipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetRecipe.json; sourceTree = "<group>"; };
+		3F2233FA222BFFAE007E2DB2 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		3F22ACDA21CFED9B00066359 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3F23279B22107DBE004D884D /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		3F2327A022109110004D884D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3F287BA821EBBF4800081B90 /* Constants.swift */,
+				3F2233FA222BFFAE007E2DB2 /* PermanentMarker-Regular.ttf */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			files = (
 				3F64230421B7B89F009F630C /* LaunchScreen.storyboard in Resources */,
 				3F64230121B7B89F009F630C /* Assets.xcassets in Resources */,
+				3F2233FB222BFFAE007E2DB2 /* PermanentMarker-Regular.ttf in Resources */,
 				3F6422FC21B7B89F009F630C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
