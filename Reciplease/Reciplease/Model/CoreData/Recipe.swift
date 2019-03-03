@@ -16,6 +16,13 @@ class Recipe: NSManagedObject {
         return favoriteRecipe
     }
     
+    static func fetch(viewContext: NSManagedObjectContext = AppDelegate.viewContext, with name: String) -> [Recipe] {
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", name)
+        guard let recipes = try? viewContext.fetch(request) else { return [] }
+        return recipes
+    }
+    
     static func deleteAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) {
         Recipe.fetchAll(viewContext: viewContext).forEach({ viewContext.delete($0) })
         try? viewContext.save()
