@@ -24,13 +24,8 @@ class CoreDataTests: XCTestCase {
     
     
     //MARK: - Tests Life Cycle
-    override func setUp() {
-        super.setUp()
-        insertRecipeItem(into: mockContainer.newBackgroundContext())
-    }
-    
     override func tearDown() {
-        Recipe.deleteAll(viewContext: mockContainer.viewContext)
+//        Recipe.deleteAll(viewContext: mockContainer.viewContext)
         super.tearDown()
     }
     
@@ -38,24 +33,30 @@ class CoreDataTests: XCTestCase {
     private func insertRecipeItem(into managedObjectContext: NSManagedObjectContext) {
         let newRecipeItem = Recipe(context: managedObjectContext)
         newRecipeItem.name = "Pizza"
+        
     }
     
     //MARK: - Unit Tests
     func testInsertManyRecipeItemsInPersistentContainer() {
-        XCTAssertNoThrow(try mockContainer.newBackgroundContext().save())
+        insertRecipeItem(into: mockContainer.viewContext)
+        XCTAssertNoThrow(try mockContainer.viewContext.save())
     }
     
     func testCheckIfEntityExistInPersistentContainer() {
-        insertRecipeItem(into: mockContainer.newBackgroundContext())
-        var isInPersistentContainer = Recipe.checkIfEntityExist(viewContext: mockContainer.viewContext, recipeName: "Hamburger")
+        let context = mockContainer.viewContext
+        insertRecipeItem(into: context)
+        try? context.save()
+        var isInPersistentContainer = Recipe.checkIfEntityExist(viewContext: context, recipeName: "Hamburger")
         XCTAssertFalse(isInPersistentContainer)
         
-        isInPersistentContainer = Recipe.checkIfEntityExist(viewContext: mockContainer.viewContext, recipeName: "Pizza")
+        isInPersistentContainer = Recipe.checkIfEntityExist(viewContext: context, recipeName: "Pizza")
         XCTAssertTrue(isInPersistentContainer)
         
     }
     
     func testDeleteOneItemInPersistentContainer() {
+        insertRecipeItem(into: mockContainer.viewContext)
+        try? mockContainer.viewContext.save()
         Recipe.deleteRecipe(viewContext: mockContainer.viewContext, recipeName: "Pizza")
         XCTAssertEqual(Recipe.fetchAll(viewContext: mockContainer.viewContext), [])
     }

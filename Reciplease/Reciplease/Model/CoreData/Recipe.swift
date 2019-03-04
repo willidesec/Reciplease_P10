@@ -32,8 +32,8 @@ class Recipe: NSManagedObject {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
-        if let objects = try? AppDelegate.viewContext.fetch(request) {
-            objects.forEach() { AppDelegate.viewContext.delete($0) }
+        if let objects = try? viewContext.fetch(request) {
+            objects.forEach() { viewContext.delete($0) }
         }
         try? viewContext.save()
     }
@@ -43,16 +43,12 @@ class Recipe: NSManagedObject {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
-        
-        // Safety enought ??
-//        let count = try? AppDelegate.viewContext.count(for: request)
-        guard let count = try? AppDelegate.viewContext.count(for: request) else { return false }
+        guard let count = try? viewContext.count(for: request) else { return false }
         
         if count == 0 {
             return false
-        } else {
-            return true
         }
+        return true
     }
     
 }
