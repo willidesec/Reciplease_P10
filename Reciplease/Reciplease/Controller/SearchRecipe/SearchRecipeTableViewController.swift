@@ -13,6 +13,8 @@ class SearchRecipeTableViewController: UITableViewController {
     // MARK: - Properties
     var searchResult: SearchRecipe?
     let yummlyService = YummlyService()
+    
+    // MARK: - Views
     let loadingScreen = LoadingScreen()
     
     // MARK: - View Life Cycle
@@ -69,8 +71,7 @@ class SearchRecipeTableViewController: UITableViewController {
                 guard let recipeDetail = recipeDetail else { return }
                 self.displayDetailRecipeViewController(with: recipeDetail)
             } else {
-                // TODO: Display Alert
-                print("error")
+                self.displayAlert(title: Constants.Alert.ERROR_TITLE, message: Constants.Alert.ERROR_MESSAGE)
             }
         }
     }

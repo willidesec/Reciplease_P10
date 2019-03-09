@@ -39,6 +39,7 @@ class DetailRecipeViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         configureTableView()
         checkIfFavoriteRecipe()
@@ -57,7 +58,7 @@ class DetailRecipeViewController: UIViewController {
     
     @objc func safariButtonDidTapped() {
         guard let source = recipeDetail?.recipeInfos.source.sourceRecipeUrl, let url = URL(string: source) else {
-            print("error")
+            displayAlert(title: Constants.Alert.ERROR_TITLE, message: Constants.Alert.ERROR_MESSAGE)
             return
         }
         UIApplication.shared.open(url)

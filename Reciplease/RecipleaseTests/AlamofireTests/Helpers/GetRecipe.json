@@ -1,0 +1,46 @@
+{
+    "nutritionEstimates": [],
+    "totalTime": "1 hr 10 min",
+    "images": [
+        {
+            "hostedSmallUrl": "https://lh3.googleusercontent.com/flOtAwy0c_23MDN9IsuhSEgB1-U027h0ZuAwS0I7bUS_xx68okPCWkguad7PAPyTMGVsWIIoy3MK37hldaOUaw=s90",
+            "hostedMediumUrl": "https://lh3.googleusercontent.com/flOtAwy0c_23MDN9IsuhSEgB1-U027h0ZuAwS0I7bUS_xx68okPCWkguad7PAPyTMGVsWIIoy3MK37hldaOUaw=s180",
+            "hostedLargeUrl": "https://lh3.googleusercontent.com/flOtAwy0c_23MDN9IsuhSEgB1-U027h0ZuAwS0I7bUS_xx68okPCWkguad7PAPyTMGVsWIIoy3MK37hldaOUaw=s360",
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/7cz_eMiazA3LLAQ567Z8V7Tyqyn4sOZ8A-MvTLjw1pt1tvSrDxYd5LKpmGBB8jkf_PToutCBV8iLbeXEMWTU9A=s90-c",
+                "360": "https://lh3.googleusercontent.com/7cz_eMiazA3LLAQ567Z8V7Tyqyn4sOZ8A-MvTLjw1pt1tvSrDxYd5LKpmGBB8jkf_PToutCBV8iLbeXEMWTU9A=s360-c"
+            }
+        }
+    ],
+    "name": "Slow-Roasted Beef Tenderloin",
+    "source": {
+        "sourceDisplayName": "Everyday Occasions By Jenny Steffens Hobick",
+        "sourceSiteUrl": "jennysteffens.blogspot.com",
+        "sourceRecipeUrl": "http://jennysteffens.blogspot.com/2013/12/slow-roasted-beef-tenderloin-holiday.html"
+    },
+    "id": "Slow-Roasted-Beef-Tenderloin-2618548",
+    "ingredientLines": [
+        "5-6 pound Beef Tenderloin, trimmed of fat, tied",
+        "olive oil",
+        "Sea Salt",
+        "Fresh Cracked Pepper"
+    ],
+    "attribution": {
+        "html": "<a href='http://www.yummly.co/recipe/Slow-Roasted-Beef-Tenderloin-2618548'>Slow-Roasted Beef Tenderloin recipe</a> information powered by <img alt='Yummly' src='https://static.yummly.co/api-logo.png'/>",
+        "url": "http://www.yummly.co/recipe/Slow-Roasted-Beef-Tenderloin-2618548",
+        "text": "Slow-Roasted Beef Tenderloin recipes: information powered by Yummly",
+        "logo": "https://static.yummly.co/api-logo.png"
+    },
+    "numberOfServings": 4,
+    "totalTimeInSeconds": 4200,
+    "attributes": {
+        "course": [
+            "Main Dishes"
+        ],
+        "holiday": [
+            "Sunday Lunch"
+        ]
+    },
+    "flavors": {},
+    "rating": 4
+}

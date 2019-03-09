@@ -1,0 +1,407 @@
+{
+    "criteria": {
+        "q": "chicken lemon",
+        "allowedIngredient": [
+            "chicken",
+            "lemon"
+        ],
+        "excludedIngredient": null
+    },
+    "matches": [
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/lZePtEa3lwMgTsKWFwHKEYx38DqfWBO1Sd7SjbfPrAOhaKauClyVbN0rGEM3PvBTwdyxygiEIRvDU45-lnabidQ=s90-c"
+            },
+            "sourceDisplayName": "Going My Wayz",
+            "ingredients": [
+                "lemon",
+                "olive oil",
+                "skinless, boneless chicken breast halves",
+                "garlic",
+                "unsalted chicken stock",
+                "cream of celery soup",
+                "baby spinach"
+            ],
+            "id": "Lemon-Chicken-Scallopini-With-Spinach-2594925",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/ZcOm5mZVh71HUnEk84bqyCztpZyAptVjMzR_bQo7Sa6En8Sd_dDQ5OKJT2TEgUrWUuA6QU7KUkWiJ8X2ukZa=s90"
+            ],
+            "recipeName": "Lemon Chicken Scallopini With Spinach",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/3S0hBdsJVvRadCeUct25fC8TA6dfEjXCOs_JgViQq__A08DLKtj3GJza24V--Wge912PTEmdION01X6XSw7akw=s90-c"
+            },
+            "sourceDisplayName": "Jo Cooks",
+            "ingredients": [
+                "boneless chicken breasts",
+                "salt",
+                "pepper",
+                "all purpose flour",
+                "butter",
+                "olive oil",
+                "fresh lemon juice",
+                "chicken stock",
+                "brined capers",
+                "fresh parsley"
+            ],
+            "id": "Lemon-Chicken-Piccata-2238756",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/euGnGVG7z6RlSW7QCzXD4Z-OOsLznuKkTQqOvm4nerMrvWc3FsWumbmYl2BbjcwICekus1Gl-xnjP02jqOy8=s90"
+            ],
+            "recipeName": "Lemon Chicken Piccata",
+            "totalTimeInSeconds": 2400,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.6666666666666666,
+                "bitter": 0.8333333333333334,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.8333333333333334
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/pgFGy1_gVJ8-Pco_y7Sr2pUwqiBLPyA2lQPpaX3vIvJ-MYFDVfluqV77cEUdj7qhzNRh6Oibx1mG48aJcOlEfg=s90-c"
+            },
+            "sourceDisplayName": "Lil' Luna",
+            "ingredients": [
+                "olive oil",
+                "lemons",
+                "minced garlic",
+                "kosher salt",
+                "freshly ground black pepper",
+                "green beans",
+                "small red potatoes",
+                "boneless, skinless chicken breasts"
+            ],
+            "id": "Lemon-Chicken-With-Veggies-2607620",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/IW7qTbCi8t5NKEVOed4UdYYFPvrhrpPtb7w5UC2fTldzLG6EwgfNSibv99gyfl-6leAUMXcqVdcdfmdcoHnbzg=s90"
+            ],
+            "recipeName": "Lemon Chicken With Veggies",
+            "totalTimeInSeconds": 5100,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/tJIcDP2_HdOo2V6ivEaG0c5zFue7FgDsWCt6kmfTXe3Mb-qt8jVG0hlyBwBfAvF8R6vQ-TzPUoHQz2XoFIgF=s90-c"
+            },
+            "sourceDisplayName": "Life Made Sweeter",
+            "ingredients": [
+                "boneless chicken thighs",
+                "sea salt",
+                "pepper",
+                "garlic powder",
+                "smoked paprika",
+                "red chili flakes",
+                "olive oil",
+                "butter",
+                "small onion",
+                "garlic cloves",
+                "lemon",
+                "Italian seasoning",
+                "low sodium chicken broth",
+                "heavy cream",
+                "fresh parsley",
+                "lemon slices"
+            ],
+            "id": "Instant-Pot-Lemon-Chicken-with-Garlic-2600874",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/WjFn6H14ZaN6q-qgfav3Cj0s8pHpGdw-foPkMroEpVLRjU6bMpI4lPHq5PGwt5MiqGdJC8hgFitPaN4nFXS8uMs=s90"
+            ],
+            "recipeName": "Instant Pot Lemon Chicken with Garlic",
+            "totalTimeInSeconds": 1680,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.16666666666666666,
+                "meaty": 0.8333333333333334,
+                "bitter": 0.16666666666666666,
+                "sweet": 0,
+                "sour": 0.6666666666666666,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/857vApevt9BEBrq6UTek44Adn2ct-Rs6w6Zgsp1u4PwVfHNWPTFmsmhO_E1RfkswvzbVH5gzw9yj7yeerK6NKA=s90-c"
+            },
+            "sourceDisplayName": "Gimme Some Oven",
+            "ingredients": [
+                "boneless skinless chicken breasts",
+                "garlic",
+                "melted butter",
+                "lemon juice",
+                "fresh thyme leaves",
+                "kosher salt",
+                "cracked black pepper",
+                "lemon slices",
+                "thyme sprigs"
+            ],
+            "id": "Baked-Lemon-Chicken-2084289",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/3VBC8stZlW2td6ppbkrlK11mMUfCKrMGC-Nb1ZgNjNL6sQ-JHSSv2YNp1JxplGVGLC5FB1sqcaJEsbby2NkdyT8=s90"
+            ],
+            "recipeName": "Baked Lemon Chicken",
+            "totalTimeInSeconds": 2100,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.6666666666666666,
+                "bitter": 0.16666666666666666,
+                "sweet": 0,
+                "sour": 0.8333333333333334,
+                "salty": 0.8333333333333334
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/ND6zw7BqJaLHGtZTyfqq7Gg310X4AtDyz-ZaawnD6LGz5BtlkxfOM9j8nDK2Cj7_uD7QAq9QcuY6IEFbpRaYkg=s90-c"
+            },
+            "sourceDisplayName": "The Chunky Chef",
+            "ingredients": [
+                "dried oregano",
+                "dried minced onion",
+                "garlic",
+                "lemon",
+                "kosher salt",
+                "black pepper",
+                "olive oil",
+                "bone-in, skin-on chicken thighs",
+                "yellow onion",
+                "long grain white rice",
+                "chicken stock",
+                "lemon slices",
+                "parsley",
+                "lemon zest"
+            ],
+            "id": "One-Pan-Greek-Lemon-Chicken-and-Rice-2548359",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/LB7YVO3c6lXdV7Lhs4aAi9kv5dabS5jWC743udvtMFNMFeU1rkMwx2-A-2tchsnDq7lHSMBP97pqfuL5FJ1k=s90"
+            ],
+            "recipeName": "One Pan Greek Lemon Chicken and Rice",
+            "totalTimeInSeconds": 5100,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ],
+                "cuisine": [
+                    "Greek"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.5,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.3333333333333333
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/Z6XUyPuTT-aDQAFpGGrwq9rHCE0yLuuKwWQ6P6dcLUvNODHVHcyq-7x75DmT2L62swr7YYbUJ6wEYilZdNp2kQ=s90-c"
+            },
+            "sourceDisplayName": "Dinner Then Dessert",
+            "ingredients": [
+                "chicken breasts boneless",
+                "unsalted butter",
+                "kosher salt",
+                "coarse ground black pepper",
+                "Italian seasoning",
+                "lemons juiced",
+                "garlic cloves",
+                "half and half",
+                "cornstarch",
+                "chicken base"
+            ],
+            "id": "Slow-Cooker-Creamy-Lemon-Chicken-2535241",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/82ozPmAoKEwcIaTdhxUkOvZB17Ws6imXEprPW-mm8LCVREJ44lqZbAKaBW7bMvqBS0wTEfLE1Nq9wSo6c2IOmw=s90"
+            ],
+            "recipeName": "Slow Cooker Creamy Lemon Chicken",
+            "totalTimeInSeconds": 18600,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.8333333333333334,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.5,
+                "salty": 0.5
+            },
+            "rating": 3
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/BfrGP-R3hcB5TsTMJlpc3KLM4kWLrcXRoe8LN54hepwVqB4DV1z52cvLH7g4vEuy_1TlcjlMB2YVuy6eh5Id=s90-c"
+            },
+            "sourceDisplayName": "Eating Well",
+            "ingredients": [
+                "gluten free penne pasta",
+                "extra virgin olive oil",
+                "boneless, skinless chicken breast",
+                "salt",
+                "ground pepper",
+                "garlic",
+                "dry white wine",
+                "lemon",
+                "fresh spinach",
+                "grated parmesan cheese"
+            ],
+            "id": "Chicken-_-Spinach-Skillet-Pasta-With-Lemon-_-Parmesan-2601355",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/_2kF5G8Irc3ZCWTMKZyFiE9f6bQD0Q_fNNaSRQYtxsga2LByAHMdhQDU_SrHNN_LxsSLWS89Vb2bMPcjRHSgNA=s90"
+            ],
+            "recipeName": "Chicken & Spinach Skillet Pasta With Lemon & Parmesan",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.3333333333333333,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/Ui1PRmK_JE0HR3HCbe7ULit5InOX-8S3CI2YVM4bSCziH5V_g3SXRhSw7uo51gthrvqBuJV2nyl7zlzHoibJ=s90-c"
+            },
+            "sourceDisplayName": "Little Spice Jar",
+            "ingredients": [
+                "boneless, skinless chicken breasts",
+                "salt",
+                "pepper",
+                "chicken broth",
+                "lemon juice",
+                "minced garlic",
+                "red pepper flakes",
+                "olive oil",
+                "shallots",
+                "salted butter",
+                "heavy cream",
+                "chopped parsley"
+            ],
+            "id": "One-Skillet-Chicken-With-Lemon-Garlic-Cream-Sauce-2490111",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/yvFfDB5rrutLlEdsCQGQvgxRse9fgWjTVdZzShkGzEghnyrKwSqEjeBiGTQa7cz59nBzrwf0GpqOmtznl8u4vA=s90"
+            ],
+            "recipeName": "One Skillet Chicken With Lemon Garlic Cream Sauce",
+            "totalTimeInSeconds": 1800,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.3333333333333333,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 0,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/Wv-nSk9JgfcpVowDOHyrmMywSM1TLU-Nvs-C5TTyDi38SCn6fw26y7xd_Br_sCa_fCmSBig22IzD_CfLmFKP=s90-c"
+            },
+            "sourceDisplayName": "Keto Connect",
+            "ingredients": [
+                "skinless chicken thighs",
+                "coconut flour",
+                "coconut oil",
+                "lemon zest",
+                "lemon juice",
+                "Swerve",
+                "chicken broth",
+                "xanthan gum"
+            ],
+            "id": "Easy-Lemon-Chicken-2528407",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/AUycCvBXHDRLAKTAL7hmabgkfm9lDg67aXg1nj6Nt6KRRsxsK-9gZJPxjHIgE-4gPMw3Npkst26lYKwnlHW8=s90"
+            ],
+            "recipeName": "Easy Lemon Chicken",
+            "totalTimeInSeconds": 1800,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.8333333333333334,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.3333333333333333,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        }
+    ],
+    "facetCounts": {},
+    "totalMatchCount": 28344,
+    "attribution": {
+        "html": "Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a>",
+        "url": "http://www.yummly.co/recipes/",
+        "text": "Recipe search powered by Yummly",
+        "logo": "https://static.yummly.co/api-logo.png"
+    }
+}

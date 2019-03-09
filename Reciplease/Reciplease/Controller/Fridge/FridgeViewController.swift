@@ -38,28 +38,40 @@ class FridgeViewController: UIViewController {
     }
     
     @IBAction func searchButtonDidTapped(_ sender: UIButton) {
-        let loadingScreen = LoadingScreen()
-        loadingScreen.startLoading()
-        yummlyService.searchRecipe(for: fridge) { (success, searchResult) in
-            loadingScreen.stopLoading()
-            if success {
-                guard let searchResult = searchResult else { return }
-                self.displaySearchResultTableViewController(with: searchResult)
-            } else {
-                // TODO: Display Alert
-                print("error")
+        if fridge.isEmpty {
+            displayAlert(title: Constants.Alert.OUPS_TITLE, message: Constants.Alert.EMPTY_FRIDGE_MESSAGE)
+        } else {
+            let loadingScreen = LoadingScreen()
+            loadingScreen.startLoading()
+            yummlyService.searchRecipe(for: fridge) { (success, searchResult) in
+                loadingScreen.stopLoading()
+                if success {
+                    if let searchResult = searchResult, searchResult.totalMatchCount != 0 {
+                        self.displaySearchResultTableViewController(with: searchResult)
+                    } else {
+                        self.displayAlert(title: Constants.Alert.OUPS_TITLE, message: Constants.Alert.NO_RECIPE_MESSAGE)
+                    }
+                } else {
+                    self.displayAlert(title: Constants.Alert.ERROR_TITLE
+                        , message: Constants.Alert.ERROR_MESSAGE)
+                }
             }
         }
     }
     
     @IBAction func clearButtonDidTapped(_ sender: UIButton) {
-        removeFoodFromFridge()
-        collectionView.reloadData()
+        if fridge.isEmpty {
+            displayAlert(title: Constants.Alert.OUPS_TITLE, message: Constants.Alert.NOTHING_TO_CLEAR)
+        } else {
+            removeFoodFromFridge()
+            collectionView.reloadData()
+        }
     }
     
     // MARK: - Methods
     func addTextFieldToFridge() {
         guard let food = foodTextField.text, foodTextField.text != "" else {
+            displayAlert(title: Constants.Alert.OUPS_TITLE, message: Constants.Alert.WRITE_INGREDIENT)
             return
         }
         fridge += food.separateElementAndReturnArray

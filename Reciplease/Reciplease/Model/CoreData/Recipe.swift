@@ -16,6 +16,13 @@ class Recipe: NSManagedObject {
         return favoriteRecipe
     }
     
+    static func fetch(viewContext: NSManagedObjectContext = AppDelegate.viewContext, with name: String) -> [Recipe] {
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", name)
+        guard let recipes = try? viewContext.fetch(request) else { return [] }
+        return recipes
+    }
+    
     static func deleteAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) {
         Recipe.fetchAll(viewContext: viewContext).forEach({ viewContext.delete($0) })
         try? viewContext.save()
@@ -25,27 +32,23 @@ class Recipe: NSManagedObject {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
-        if let objects = try? AppDelegate.viewContext.fetch(request) {
-            objects.forEach() { AppDelegate.viewContext.delete($0) }
+        if let objects = try? viewContext.fetch(request) {
+            objects.forEach() { viewContext.delete($0) }
         }
         try? viewContext.save()
     }
     
     // TODO: add parameter context to test methods
-    static func checkIfEntityExist(recipeName: String) -> Bool {
+    static func checkIfEntityExist(viewContext: NSManagedObjectContext = AppDelegate.viewContext, recipeName: String) -> Bool {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
         request.predicate = predicate
-        
-        // Safety enought ??
-//        let count = try? AppDelegate.viewContext.count(for: request)
-        guard let count = try? AppDelegate.viewContext.count(for: request) else { return false }
+        guard let count = try? viewContext.count(for: request) else { return false }
         
         if count == 0 {
             return false
-        } else {
-            return true
         }
+        return true
     }
     
 }

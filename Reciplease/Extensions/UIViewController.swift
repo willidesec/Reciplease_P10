@@ -15,4 +15,10 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+    func displayAlert(title: String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: Constants.Alert.CLOSE, style: .default, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
+    
 }

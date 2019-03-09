@@ -27,6 +27,7 @@ class FavoriteViewController: UIViewController {
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
+        searchController.definesPresentationContext = true
         return searchController
     }()
     
@@ -54,6 +55,7 @@ class FavoriteViewController: UIViewController {
     private func setBehaviors() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        self.definesPresentationContext = true
     }
 
 }
@@ -64,12 +66,16 @@ class FavoriteViewController: UIViewController {
 // MARK: - Extensions
 extension FavoriteViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("yes")
-        
-        favoriteRecipes = favoriteRecipes.filter { (recipe) -> Bool in
-            guard let name = recipe.name else { return false }
-            return name.contains(searchText)
+        if searchText.count == 0 {
+           favoriteRecipes = Recipe.fetchAll()
+        } else {
+           favoriteRecipes = Recipe.fetch(with: searchText)
         }
+        favoriteTableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        favoriteRecipes = Recipe.fetchAll()
         favoriteTableView.reloadData()
     }
 }

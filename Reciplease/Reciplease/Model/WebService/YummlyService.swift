@@ -45,7 +45,7 @@ class YummlyService {
             if ingredient == ingredients.last {
                 parameters += ingredient.lowercased()
             } else {
-                parameters += "\(ingredient)+"
+                parameters += "\(ingredient.lowercased())+"
             }
         }
         var allowedIngredients = ""
