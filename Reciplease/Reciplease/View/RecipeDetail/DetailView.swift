@@ -64,7 +64,7 @@ class DetailView: UIView {
     let energeticValueImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "kcal")
+        imageView.image = UIImage(named: "calories")
         return imageView
     }()
     
