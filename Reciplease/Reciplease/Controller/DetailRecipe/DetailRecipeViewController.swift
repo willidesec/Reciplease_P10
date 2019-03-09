@@ -78,7 +78,12 @@ class DetailRecipeViewController: UIViewController {
         favoriteRecipe.duration = recipeDetail.recipeInfos.totalTime
         favoriteRecipe.rating = String(recipeDetail.recipeInfos.rating)
         favoriteRecipe.image = recipeDetail.recipeInfos.images[0].hostedLargeUrl.transformImageUrlToData()
-        favoriteRecipe.calories = String(recipeDetail.recipeInfos.nutritionEstimates[0].value)
+        if recipeDetail.recipeInfos.nutritionEstimates.isEmpty {
+            favoriteRecipe.calories = Constants.NO_VALUE
+        } else {
+            let calories = recipeDetail.recipeInfos.nutritionEstimates[0].value
+            favoriteRecipe.calories = String(calories)
+        }
         favoriteRecipe.servings = String(recipeDetail.recipeInfos.numberOfServings)
         favoriteRecipe.source = recipeDetail.recipeInfos.source.sourceRecipeUrl
 
