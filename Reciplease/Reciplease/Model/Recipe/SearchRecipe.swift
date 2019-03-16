@@ -14,7 +14,6 @@ struct SearchRecipe: Decodable {
 }
 
 struct Infos: Decodable {
-    // TODO: prévoir image par default
     let smallImageUrls: [String]
     let ingredients: [String]
     let id: String

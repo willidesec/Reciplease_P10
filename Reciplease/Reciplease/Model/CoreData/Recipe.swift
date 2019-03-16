@@ -38,7 +38,6 @@ class Recipe: NSManagedObject {
         try? viewContext.save()
     }
     
-    // TODO: add parameter context to test methods
     static func checkIfEntityExist(viewContext: NSManagedObjectContext = AppDelegate.viewContext, recipeName: String) -> Bool {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", recipeName)
@@ -53,10 +52,6 @@ class Recipe: NSManagedObject {
     
 }
 
-class Ingredient: NSManagedObject {
-    
-}
+class Ingredient: NSManagedObject {}
 
-class Instruction: NSManagedObject {
-    
-}
+class Instruction: NSManagedObject {}
