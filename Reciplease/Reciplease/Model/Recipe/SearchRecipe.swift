@@ -14,11 +14,11 @@ struct SearchRecipe: Decodable {
 }
 
 struct Infos: Decodable {
-    let smallImageUrls: [String]
+    let smallImageUrls: [String]?
     let ingredients: [String]
     let id: String
     let recipeName: String
-    let totalTimeInSeconds: Int
+    let totalTimeInSeconds: Int?
     let rating: Int
 }
 

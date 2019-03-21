@@ -12,7 +12,8 @@ class RecipeCell: UITableViewCell {
     
     var recipe: Infos? {
         didSet {
-            guard let data = recipe?.smallImageUrls[0].dropTwoLastAndReplaceWith("500").transformImageUrlToData() else { return }
+            guard let smallImageUrls = recipe?.smallImageUrls else { return }
+            let data = smallImageUrls[0].dropTwoLastAndReplaceWith("500").transformImageUrlToData()
             recipeImage.image = UIImage(data: data)
             nameLabel.text = recipe?.recipeName
             guard var timeInSeconds = recipe?.totalTimeInSeconds else { return }
